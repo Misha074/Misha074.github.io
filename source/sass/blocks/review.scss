@@ -1,0 +1,138 @@
+.review {
+  padding: 50px 50px 42px;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
+  color: $color-cerulean-blue;
+
+  @include vp-1199 {
+    padding-bottom: 46px;
+  }
+
+  @include vp-767 {
+    padding: 30px 14px 24px;
+  }
+}
+
+.review__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+
+  @include vp-1199 {
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 24px;
+    flex-direction: column;
+    align-items: start;
+    gap: 14px;
+  }
+}
+
+.review__author {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 18px;
+    line-height: 24px;
+    width: 50%;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+.review__avatar-wrapper {
+  margin-right: 15px;
+
+  @include vp-767 {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+}
+
+.review__info {
+  display: flex;
+}
+
+.review__item {
+  span {
+    display: block;
+  }
+
+  span:first-child {
+    font-size: 12px;
+    line-height: 1em;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+  }
+
+  span:last-child {
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-charcoal;
+
+    @include vp-1199 {
+      white-space: nowrap;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.review__item + .review__item {
+  margin-left: 25px;
+}
+
+.review__text {
+  blockquote {
+    font-size: 24px;
+    line-height: 26px;
+    margin: 0;
+    margin-bottom: 15px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-charcoal;
+
+    @include vp-1199 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.faq {
+  color: $color-cerulean-blue;
+}
+
+.faq__container {
+  text-align: center;
+  padding-bottom: 124px;
+
+  @include vp-1199 {
+    padding-bottom: 99px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 70px;
+  }
+}
+
+.faq__header {
+  margin-bottom: 67px;
+
+  @include vp-1199 {
+    margin-bottom: 41px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 33px;
+  }
+}
+
+.faq__accordion {
+  padding: 0 106px;
+
+  @include vp-1199 {
+    padding: 0;
+  }
+}

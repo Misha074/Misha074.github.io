@@ -1,0 +1,508 @@
+.form {
+  color: $color-default-white;
+
+  form {
+    background-color: $color-cerulean-blue;
+    padding: 82px 74px 51px;
+    width: 498px;
+    height: auto;
+
+    position: relative;
+    z-index: 2;
+    border-radius: 16px;
+
+    @include vp-1199 {
+      padding: 61px 45px 59px;
+      width: 442px;
+    }
+
+    @include vp-767 {
+      padding: 51px 15px 50px;
+      width: 100%;
+    }
+
+    span {
+      font-size: 32px;
+      line-height: 36px;
+      margin-bottom: 25px;
+      display: block;
+
+      @include vp-1199 {
+        font-size: 28px;
+        line-height: 28px;
+        margin-bottom: 27px;
+      }
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 17px;
+      }
+    }
+
+    .form__agreement {
+      span {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0;
+      margin-bottom: 19px;
+
+      @include vp-1199 {
+        line-height: 20px;
+        margin-bottom: 32px;
+      }
+
+      @include vp-767 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 26px;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    div:last-of-type {
+      flex-direction: row;
+      margin-top: 19px;
+    }
+
+    div + div {
+      margin-top: 16px;
+
+      @include vp-767 {
+        margin-top: 21px;
+      }
+    }
+
+    label {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 8px;
+      cursor: pointer;
+
+      @include vp-767 {
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 11px;
+      }
+    }
+
+    .form__agreement-label {
+      font-size: 12px;
+      line-height: 12px;
+      opacity: 0.9;
+      margin-bottom: 0;
+      padding-left: 35px;
+      transform: translateX(-35px);
+      white-space: nowrap;
+
+      @include vp-767 {
+        white-space: unset;
+        line-height: 14px;
+      }
+    }
+
+    input,
+    textarea,
+    select {
+      margin: 0;
+      padding: 16px 25px 13px;
+      border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
+      background-color: transparent;
+
+      font-size: 14px;
+      line-height: 14px;
+      border-radius: 8px;
+      color: $color-default-white;
+      outline: none;
+    }
+
+    input:hover,
+    textarea:hover,
+    select:hover {
+      border-color: $color-default-white;
+    }
+
+    input:active,
+    input:focus,
+    textarea:active,
+    textarea:focus,
+    select:active select:focus {
+      border-color: $color-default-white;
+    }
+
+    input:disabled,
+    textarea:disabled,
+    select:disabled {
+      border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
+      background-color: rgba($color: $color-default-white, $alpha: 0.2);
+    }
+
+    .form__input--invalid {
+      border: 1px solid rgba($color: $color-wild-watermelon, $alpha: 1);
+      background-color: rgba($color: $color-wild-watermelon, $alpha: 0.2);
+    }
+
+    select {
+      color: $color-default-white;
+      cursor: pointer;
+
+      option {
+        color: $color-default-black;
+      }
+    }
+
+    textarea {
+      @include vp-1199 {
+        padding-bottom: 10px;
+      }
+
+      @include vp-767 {
+        padding-bottom: 6px;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 3px 3px 3px 1px;
+      margin: 0;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      border-radius: 30px;
+      letter-spacing: 0.02em;
+      color: $color-default-white;
+      border: 1px solid $color-default-white;
+      background-color: transparent;
+      cursor: pointer;
+
+      @include vp-1199 {
+        margin-top: 38px;
+      }
+
+      @include vp-767 {
+        margin-top: 29px;
+      }
+
+      span {
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-left: auto;
+        margin-bottom: 0;
+
+        @include vp-767 {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      span:last-child {
+        width: 46px;
+        height: 46px;
+        background-color: $color-default-white;
+        color: $color-cerulean-blue;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        @include vp-767 {
+          width: 34px;
+          height: 34px;
+        }
+      }
+    }
+
+    button:hover,
+    button:focus {
+      background-color: $color-default-white;
+      color: $color-cerulean-blue;
+
+      span:last-child {
+        background-color: $color-cerulean-blue;
+        color: $color-default-white;
+      }
+    }
+
+    button:active {
+      color: rgba($color: $color-cerulean-blue, $alpha: 0.7);
+    }
+
+    button:disabled {
+      border-color: $color-mischka;
+      color: $color-mischka;
+      background-color: transparent;
+      cursor: unset;
+
+      span:last-child {
+        background-color: $color-mischka;
+        color: $color-default-white;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: unset;
+    max-width: unset;
+    right: 0;
+
+    @include vp-1199 {
+      width: 679px;
+      height: 780px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.form--modal {
+  form {
+    background-color: $color-default-white;
+
+    label,
+    p,
+    span {
+      color: $color-default-black;
+    }
+
+    input,
+    textarea,
+    select {
+      border: 1px solid rgba($color: $color-default-black, $alpha: 0.3);
+      color: $color-default-black;
+    }
+
+    input:hover,
+    textarea:hover,
+    select:hover {
+      border-color: rgba($color: $color-default-black, $alpha: 1);
+    }
+
+    input:active,
+    input:focus,
+    textarea:active,
+    textarea:focus,
+    select:active select:focus {
+      border-color: rgba($color: $color-default-black, $alpha: 1);
+    }
+
+    input:disabled,
+    textarea:disabled,
+    select:disabled {
+      border: 1px solid rgba($color: $color-default-black, $alpha: 0.3);
+      background-color: rgba($color: $color-default-white, $alpha: 0.2);
+    }
+
+    .form__input--invalid {
+      border: 1px solid rgba($color: $color-wild-watermelon, $alpha: 1);
+      background-color: rgba($color: $color-wild-watermelon, $alpha: 0.2);
+    }
+
+    select {
+      color: $color-default-black;
+
+      option {
+        color: $color-default-black;
+      }
+    }
+
+    button {
+      color: $color-default-white;
+      border: 1px solid rgba($color: $color-default-black, $alpha: 0.7);
+      background-color: transparent;
+
+      span:last-child {
+        background-color: $color-cerulean-blue;
+        color: $color-default-white;
+      }
+    }
+
+    button:hover,
+    button:focus {
+      color: $color-default-white;
+      background-color: $color-cerulean-blue;
+
+      span:last-child {
+        color: $color-cerulean-blue;
+        background-color: $color-default-white;
+      }
+    }
+
+    button:active {
+      background-color: $color-endeavour;
+      border: 1px solid rgba($color: $color-default-black, $alpha: 1);
+    }
+
+    button:disabled {
+      border-color: $color-mischka;
+      color: $color-mischka;
+      background-color: transparent;
+      cursor: unset;
+
+      span:last-child {
+        background-color: $color-mischka;
+        color: $color-default-white;
+      }
+    }
+
+    .form__agreement {
+      span {
+        border-color: rgba($color: $color-default-black, $alpha: 0.3);
+      }
+    }
+  }
+}
+
+.form__container {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  border-radius: 16px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 67px;
+    padding-bottom: 29px;
+  }
+}
+
+.form__content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.form__agreement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 19px;
+
+  @include vp-767 {
+    margin-top: 20px;
+  }
+
+  input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    min-width: 20px;
+    margin-bottom: 0;
+    height: 20px;
+    background-color: rgba($color: $color-default-white, $alpha: 0);
+    border: 1px solid rgba($color: $color-default-white, $alpha: 0.5);
+    border-radius: 2px;
+    vertical-align: sub;
+    margin-right: 10px;
+    transition: all 0.2s;
+  }
+
+
+  /* Рисуем состояния */
+  /* фокус на реальный чекбокс с клавиатуры */
+  input[type="checkbox"] + span {
+    svg {
+      opacity: 0;
+      transition: all 0.2s;
+    }
+  }
+
+  input[type="checkbox"]:focus + span {
+    border-color: $color-default-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input[type="checkbox"]:disabled + span {
+    border-color: $color-default-white;
+    background-color: rgba($color: $color-default-white, $alpha: 0);
+  }
+
+  input[type="checkbox"]:disabled ~ label {
+    cursor: default;
+  }
+
+  /* Активируем фейковый / декоративный чекбокс */
+
+  input[type="checkbox"]:checked + span {
+    background-color: rgba($color: $color-default-white, $alpha: 1);
+    color: $color-cerulean-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  input[type="checkbox"]:checked:focus + span {
+    border-color: $color-default-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: $color-default-white, $alpha: 0);
+    color: $color-default-white;
+  }
+
+  input[type="checkbox"]:disabled:checked + span {
+    border-color: rgba($color: $color-default-white, $alpha: 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-mischka;
+    color: $color-default-white;
+  }
+}
+
+/* ховер на строку */
+.form__agreement:hover {
+  span {
+    border-color: $color-default-white;
+  }
+
+  input[type="checkbox"]:checked + span {
+    border-color: $color-default-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: $color-default-white, $alpha: 0);
+    color: $color-default-white;
+  }
+
+  input[type="checkbox"]:disabled:checked + span {
+    border-color: rgba($color: $color-default-white, $alpha: 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-mischka;
+    color: $color-default-white;
+  }
+}

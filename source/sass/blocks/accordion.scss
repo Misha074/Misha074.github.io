@@ -1,0 +1,223 @@
+.accordion__element {
+  background-color: transparent;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.accordion__element + .accordion__element {
+  margin-top: 10px;
+}
+
+.accordion__element.is-active {
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  // padding-bottom: 32px;
+
+  // @include vp-1199 {
+  //   padding-bottom: 25px;
+  // }
+
+  // @include vp-767 {
+  //   padding-bottom: 14px;
+  // }
+
+  // .accordion__button {
+  //   margin-bottom: 13px;
+
+  //   @include vp-1199 {
+  //     margin-bottom: 16px;
+  //   }
+
+  .accordion__button {
+    padding-bottom: 0;
+  }
+
+  .accordion__button:hover,
+  .accordion__button:focus-visible {
+    background-color: $color-cerulean-blue;
+
+    .accordion__element-icon-wrapper {
+      background-color: transparent;
+      color: $color-default-white;
+      border-color: $color-default-white;
+    }
+  }
+
+  .accordion__button:active {
+    background-color: $color-endeavour;
+    border-radius: 16px 16px 0 0;
+
+    .accordion__element-icon-wrapper {
+      background-color: $color-default-white;
+      color: $color-cerulean-blue;
+      border-color: transparent;
+    }
+  }
+
+  .accordion__button:active + .accordion__content {
+    background-color: $color-endeavour;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .accordion__button-title {
+    color: $color-default-white;
+  }
+
+  .accordion__element-icon-wrapper {
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+
+    svg:first-of-type {
+      display: none;
+    }
+
+    svg:last-of-type {
+      display: block;
+    }
+  }
+
+  .accordion__content {
+    padding: 13px 40px 32px;
+    max-height: unset !important;
+
+    @include vp-1199 {
+      padding: 16px 29px 25px;
+    }
+
+    @include vp-767 {
+      padding: 16px 14px 13px;
+    }
+  }
+}
+
+.accordion__element--longtitle {
+  .accordion__button {
+    padding: 22px 39px 33px;
+
+    @include vp-1199 {
+      padding: 18px 29px 24px;
+    }
+
+    @include vp-767 {
+      padding: 16px 14px 19px;
+    }
+  }
+
+  .accordion__button-title {
+    margin-top: 9px;
+
+    @include vp-1199 {
+      margin-top: 6px;
+    }
+
+    @include vp-767 {
+      margin-top: 3px;
+    }
+  }
+}
+
+.accordion__button {
+  color: $color-cerulean-blue;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 0;
+  transition: all 0.5s;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  border-radius: 16px;
+
+  padding: 39px;
+
+  @include vp-1199 {
+    padding: 29px 30px 29px 29px;
+  }
+
+  @include vp-767 {
+    padding: 19px 14px 19px;
+    border-radius: 14px;
+  }
+}
+
+.accordion__button:hover,
+.accordion__button:focus-visible {
+  background-color: $color-default-white;
+
+  .accordion__element-icon-wrapper {
+    background-color: transparent;
+    color: $color-cerulean-blue;
+    border-color: $color-cerulean-blue;
+  }
+}
+
+.accordion__button:active {
+  background-color: $color-endeavour;
+
+  .accordion__element-icon-wrapper {
+    background-color: $color-endeavour;
+    color: $color-default-white;
+    border-color: transparent;
+  }
+}
+
+.accordion__button-title {
+  font-size: 28px;
+  line-height: 34px;
+  width: 75%;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 26px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.accordion__element-icon-wrapper {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  border-radius: 50%;
+  border: 1px solid transparent;
+
+  svg:last-of-type {
+    display: none;
+  }
+}
+
+.accordion__content {
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 16px;
+
+  // @include vp-1199 {
+  //   width: 90%;
+  // }
+
+  p {
+    margin: 0;
+    margin-right: auto;
+    width: fit-content;
+    text-align: start;
+    max-width: 640px;
+
+    @include vp-1199 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      //Намеренно вставляю letter-spacing которого нет в макете для простоты проверки, чтобы избежать лишних строк образующихся из-за типографа
+      letter-spacing: -0.6px;
+    }
+  }
+}
