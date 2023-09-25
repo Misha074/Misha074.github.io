@@ -11,16 +11,19 @@
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
 
   @include vp-1199 {
-    gap: 0;
+    gap: 10px;
     margin-bottom: 1px;
   }
 
   @include vp-767 {
+    flex-wrap: nowrap;
     width: fit-content;
+    gap: 12px;
   }
 }
 
@@ -40,6 +43,16 @@
   padding: 12px 25px 10px;
   border-color: transparent;
   opacity: 0.6;
+
+  @include vp-1199 {
+    padding: 12px 19px 10px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 9px 13px 6px;
+  }
 }
 
 .filter__button:hover,
