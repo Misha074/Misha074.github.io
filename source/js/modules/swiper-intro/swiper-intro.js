@@ -4,8 +4,7 @@ function initIntroSwiper() {
     // Автоматическое перелистывание слайдов
     autoplay: {
       delay: 3000,
-      disableOnInteraction: true,
-      pauseOnMouseEnter: true,
+      disableOnInteraction: false,
     },
     // Буллеты пагинации (кликабельные)
     pagination: {

@@ -35,7 +35,9 @@
 }
 
 .footer__nav-list {
+  max-width: 750px;
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   align-items: center;
   gap: 30px;
@@ -64,7 +66,8 @@
   }
 
   a:hover,
-  a:focus {
+  a:focus,
+  a:focus-visible {
     color: $color-cerulean-blue;
     outline: none;
   }
@@ -75,10 +78,13 @@
 }
 
 .footer__socials-list {
+  max-width: 250px;
   margin: 0;
+  margin-left: auto;
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
   justify-content: end;
@@ -113,6 +119,7 @@
   a:hover,
   a:focus {
     color: rgba($color: $color-default-white, $alpha: 0.5);
+    outline: none;
   }
 
   a:active {

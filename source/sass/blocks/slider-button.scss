@@ -13,6 +13,7 @@
 .slider-button:hover,
 .slider-button:focus-visible {
   background-color: rgba($color: $color-default-white, $alpha: 1);
+  outline: none;
 }
 
 .slider-button:active {

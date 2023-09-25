@@ -1,3 +1,9 @@
+.nav {
+  .accordion__element.is-active .accordion__content {
+    padding-bottom: 0;
+  }
+}
+
 .nav__toggle {
   width: 100%;
   margin-left: auto;
@@ -46,9 +52,7 @@
 
   .button__circle {
     margin-left: auto;
-    // background-color: $color-default-white;
     background-color: $color-cerulean-blue;
-    // color: $color-cerulean-blue;
     color: $color-default-white;
 
     svg:first-of-type {
@@ -113,8 +117,10 @@
     color: rgba($color: $color-default-white, $alpha: 0.7);
   }
 
-  a:hover {
-    text-decoration: underline;
+  a:hover,
+  a:focus {
+    color: rgba($color: $color-default-white, $alpha: 1);
+    outline: none;
   }
 
   .accordion__button {
@@ -122,6 +128,18 @@
     color: rgba($color: $color-default-white, $alpha: 0.7);
     align-items: center;
   }
+
+  .accordion__button:hover,
+  .accordion__button:focus {
+    color: rgba($color: $color-default-white, $alpha: 1);
+    background-color: transparent;
+    outline: none;
+
+    span {
+      color: rgba($color: $color-default-white, $alpha: 1);
+    }
+  }
+
 
   .accordion__button-title {
     font-size: 16px;

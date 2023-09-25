@@ -40,6 +40,7 @@
 .contacts__header {
   color: $color-default-white;
   margin-top: 4px;
+  margin-right: 150px;
 }
 
 .contacts__list {
@@ -48,6 +49,7 @@
   list-style-type: none;
   display: flex;
   gap: 51px;
+  flex-wrap: wrap;
 
   @include vp-1199 {
     margin-top: 31px;
@@ -95,6 +97,7 @@
     color: $color-default-white;
     font-size: 16px;
     line-height: 26px;
+    white-space: nowrap;
 
     @include vp-767 {
       font-size: 14px;
@@ -105,6 +108,7 @@
   a:hover,
   a:focus {
     text-decoration: underline;
+    outline: none;
   }
 
   a:active {

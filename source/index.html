@@ -8,7 +8,6 @@
   <meta name="description" content="«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.">
   <title>Маса</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- <link rel="stylesheet" href="/source/js/modules/leaflet/leaflet.css"> -->
   <link rel="preload" href="fonts/manrope-v14-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/manrope-v14-cyrillic_latin-regular.woff" as="font" type="font/woff" crossorigin="">
   <link rel="preload" href="fonts/manrope-v14-cyrillic_latin-300.woff2" as="font" type="font/woff2" crossorigin="">
@@ -24,7 +23,7 @@
       <div class="header__main-header">
         <div class="header__logo-wrapper">
           <a class="header__home-link" href="index.html">
-            <img src="./img/logo.png" alt="логотип проекта Masa">
+            <img width="52" height="52" src="./img/logo.webp" alt="логотип проекта Masa">
           </a>
         </div>
         <div class="header__nav nav nav--closed nav--nojs">
@@ -42,10 +41,10 @@
           <ul class="nav__list nav__list--closed nav__list--nojs accordion" data-accordion="parent"
             data-single="data-single">
             <li class="nav__item">
-              <a href="#">О проекте</a>
+              <a class="nav__item-link" href="#" tabindex="-1">О проекте</a>
             </li>
             <li class="nav__item accordion__element" data-accordion="element">
-              <button class="accordion__button btn" type="button" data-accordion="button">
+              <button class="accordion__button nav__item-link btn" type="button" data-accordion="button">
                 <span class="accordion__button-title">
                   Программы
                 </span>
@@ -55,35 +54,35 @@
               </button>
               <ul class="accordion__content accordion__content--nojs" data-accordion="content">
                 <li class="nav__subitem">
-                  <a href="#">
+                  <a class="nav__item-link" href="#" tabindex="-1">
                     Стажировки
                   </a>
                 </li>
                 <li class="nav__subitem">
-                  <a href="#">
+                  <a class="nav__item-link" href="#" tabindex="-1">
                     Волонтёрство
                   </a>
                 </li>
                 <li class="nav__subitem">
-                  <a href="#">
+                  <a class="nav__item-link" href="#" tabindex="-1">
                     Учёба
                   </a>
                 </li>
                 <li class="nav__subitem">
-                  <a href="#">
+                  <a class="nav__item-link" href="#" tabindex="-1">
                     Религия
                   </a>
                 </li>
               </ul>
             </li>
             <li class="nav__item">
-              <a>Как поехать</a>
+              <a class="nav__item-link" href="#" tabindex="-1">Как поехать</a>
             </li>
             <li class="nav__item">
-              <a>Отзывы</a>
+              <a class="nav__item-link" href="#" tabindex="-1">Отзывы</a>
             </li>
             <li class="nav__item accordion__element" data-accordion="element">
-              <button class="accordion__button btn" type="button" data-accordion="button">
+              <button class="accordion__button nav__item-link btn" type="button" data-accordion="button">
                 <span class="accordion__button-title">
                   Новости
                 </span>
@@ -92,11 +91,25 @@
                 </svg>
               </button>
               <ul class="accordion__content accordion__content--nojs" data-accordion="content">
-                <li>Новость №1</li>
-                <li>Новость №2</li>
-                <li>Новость №3</li>
-                <li>Новость №4</li>
+                <li class="nav__subitem">
+                  <a class="nav__item-link" href="#" tabindex="-1">
+                    Новость №1
+                  </a>
+                </li>
+                <li class="nav__subitem">
+                  <a class="nav__item-link" href="#" tabindex="-1">
+                    Новость №2
+                  </a>
+                </li>
+                <li class="nav__subitem">
+                  <a class="nav__item-link" href="#" tabindex="-1">
+                    Новость №3
+                  </a>
+                </li>
               </ul>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-link" href="#" tabindex="-1">Контакты</a>
             </li>
           </ul>
         </div>
@@ -109,6 +122,18 @@
           <div class="intro__swiper swiper">
             <ul class="swiper-wrapper intro__swiper-wrapper">
               <li class="swiper-slide intro__slide intro__slide--1" tabindex="-1" data-slide-swiper-intro>
+                <div class="intro__slide-image-wrapper">
+                  <picture>
+                    <source media="(min-width: 1200px)"
+                      srcset="img/intro-slider/background-1-desktop.webp 1x, img/intro-slider/background-1-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                    srcset="img/intro-slider/background-1-tablet.webp 1x, img/intro-slider/background-1-tablet@2x.webp 2x">
+                    <source
+                    srcset="img/intro-slider/background-1-mobile.webp 1x, img/intro-slider/background-1-mobile@2x.webp 2x">
+                    <img width="1440" height="800" src="./img/intro-slider/background-1-desktop.webp"
+                      alt="текст заглушка альта" loading="lazy">
+                  </picture>
+                </div>
                 <div class="intro__slide-container container">
                   <div class="intro__slide-main slide-main">
                     <h2 class="slide-main__title">
@@ -142,6 +167,18 @@
               </li>
 
               <li class="swiper-slide intro__slide intro__slide--2" tabindex="-1" data-slide-swiper-intro>
+                <div class="intro__slide-image-wrapper">
+                  <picture>
+                    <source media="(min-width: 1200px)"
+                      srcset="img/intro-slider/background-2-desktop.webp 1x, img/intro-slider/background-2-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                    srcset="img/intro-slider/background-2-tablet.webp 1x, img/intro-slider/background-2-tablet@2x.webp 2x">
+                    <source
+                    srcset="img/intro-slider/background-2-mobile.webp 1x, img/intro-slider/background-2-mobile@2x.webp 2x">
+                    <img width="1440" height="800" src="./img/intro-slider/background-2-desktop.webp"
+                      alt="текст заглушка альта" loading="lazy">
+                  </picture>
+                </div>
                 <div class="intro__slide-container container">
                   <div class="intro__slide-main slide-main">
                     <h2 class="slide-main__title">
@@ -176,6 +213,18 @@
               </li>
 
               <li class="swiper-slide intro__slide intro__slide--3" tabindex="-1" data-slide-swiper-intro>
+                <div class="intro__slide-image-wrapper">
+                  <picture>
+                    <source media="(min-width: 1200px)"
+                      srcset="img/intro-slider/background-3-desktop.webp 1x, img/intro-slider/background-3-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                    srcset="img/intro-slider/background-3-tablet.webp 1x, img/intro-slider/background-3-tablet@2x.webp 2x">
+                    <source
+                    srcset="img/intro-slider/background-3-mobile.webp 1x, img/intro-slider/background-3-mobile@2x.webp 2x">
+                    <img width="1440" height="800" src="./img/intro-slider/background-3-desktop.webp"
+                      alt="текст заглушка альта" loading="lazy">
+                  </picture>
+                </div>
                 <div class="intro__slide-container container">
                   <div class="intro__slide-main slide-main">
                     <h2 class="slide-main__title">
@@ -698,7 +747,7 @@
                       srcset="img/news-and-materials/common-slider/common-2-tablet.webp 1x, img/news-and-materials/common-slider/common-2-tablet@2x.webp 2x">
                     <source
                       srcset="img/news-and-materials/common-slider/common-2-mobile.webp 1x, img/news-and-materials/common-slider/common-2-mobile@2x.webp 2x">
-                    <img width="604" height="400" src="./img/news-and-materials/common-slider/common-2-desktop.webp"
+                    <img width="288" height="400" src="./img/news-and-materials/common-slider/common-2-desktop.webp"
                       alt="текст заглушка альта" loading="lazy">
                   </picture>
                 </div>
@@ -734,7 +783,7 @@
                       srcset="img/news-and-materials/common-slider/common-4-tablet.webp 1x, img/news-and-materials/common-slider/common-4-tablet@2x.webp 2x">
                     <source
                       srcset="img/news-and-materials/common-slider/common-4-mobile.webp 1x, img/news-and-materials/common-slider/common-4-mobile@2x.webp 2x">
-                    <img width="604" height="400" src="./img/news-and-materials/common-slider/common-4-desktop.webp"
+                    <img width="288" height="400" src="./img/news-and-materials/common-slider/common-4-desktop.webp"
                       alt="текст заглушка альта" loading="lazy">
                   </picture>
                 </div>
@@ -770,7 +819,7 @@
                       srcset="img/news-and-materials/common-slider/common-3-tablet.webp 1x, img/news-and-materials/common-slider/common-3-tablet@2x.webp 2x">
                     <source
                       srcset="img/news-and-materials/common-slider/common-3-mobile.webp 1x, img/news-and-materials/common-slider/common-3-mobile@2x.webp 2x">
-                    <img width="604" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
+                    <img width="288" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
                       alt="текст заглушка альта" loading="lazy">
                   </picture>
                 </div>
@@ -807,7 +856,7 @@
                       srcset="img/news-and-materials/common-slider/common-3-tablet.webp 1x, img/news-and-materials/common-slider/common-3-tablet@2x.webp 2x">
                     <source
                       srcset="img/news-and-materials/common-slider/common-3-mobile.webp 1x, img/news-and-materials/common-slider/common-3-mobile@2x.webp 2x">
-                    <img width="604" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
+                    <img width="288" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
                       alt="текст заглушка альта" loading="lazy">
                   </picture>
                 </div>
@@ -842,7 +891,7 @@
                       srcset="img/news-and-materials/common-slider/common-3-tablet.webp 1x, img/news-and-materials/common-slider/common-3-tablet@2x.webp 2x">
                     <source
                       srcset="img/news-and-materials/common-slider/common-3-mobile.webp 1x, img/news-and-materials/common-slider/common-3-mobile@2x.webp 2x">
-                    <img width="604" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
+                    <img width="288" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
                       alt="текст заглушка альта" loading="lazy">
                   </picture>
                 </div>
@@ -877,7 +926,7 @@
                       srcset="img/news-and-materials/common-slider/common-3-tablet.webp 1x, img/news-and-materials/common-slider/common-3-tablet@2x.webp 2x">
                     <source
                       srcset="img/news-and-materials/common-slider/common-3-mobile.webp 1x, img/news-and-materials/common-slider/common-3-mobile@2x.webp 2x">
-                    <img width="604" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
+                    <img width="288" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
                       alt="текст заглушка альта" loading="lazy">
                   </picture>
                 </div>
@@ -912,7 +961,7 @@
                       srcset="img/news-and-materials/common-slider/common-3-tablet.webp 1x, img/news-and-materials/common-slider/common-3-tablet@2x.webp 2x">
                     <source
                       srcset="img/news-and-materials/common-slider/common-3-mobile.webp 1x, img/news-and-materials/common-slider/common-3-mobile@2x.webp 2x">
-                    <img width="604" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
+                    <img width="288" height="400" src="./img/news-and-materials/common-slider/common-3-desktop.webp"
                       alt="текст заглушка альта" loading="lazy">
                   </picture>
                 </div>
@@ -1080,7 +1129,13 @@
                   <div class="review__header">
                     <div class="review__author">
                       <div class="review__avatar-wrapper">
-                        <img src="./img/reviews-slider/review-1-desktop.png" alt="текст заглушка альта">
+                        <picture>
+                          <source media="(min-width: 768px)"
+                          srcset="./img/reviews-slider/review-1-desktop.webp 1x, img/reviews-slider/review-1-desktop@2x.webp 2x">
+                          <source
+                            srcset="./img/reviews-slider/review-1-mobile.webp 1x, img/reviews-slider/review-1-mobile@2x.webp 2x">
+                            <img width="90" height="90" src="./img/reviews-slider/review-1-desktop.webp" alt="текст заглушка альта" loading="lazy">
+                        </picture>
                       </div>
                       <span>Сара Аврахам</span>
                     </div>
@@ -1114,7 +1169,13 @@
                   <div class="review__header">
                     <div class="review__author">
                       <div class="review__avatar-wrapper">
-                        <img src="./img/reviews-slider/review-2-desktop.png" alt="текст заглушка альта">
+                        <picture>
+                          <source media="(min-width: 768px)"
+                          srcset="./img/reviews-slider/review-2-desktop.webp 1x, img/reviews-slider/review-2-desktop@2x.webp 2x">
+                          <source
+                            srcset="./img/reviews-slider/review-2-mobile.webp 1x, img/reviews-slider/review-2-mobile@2x.webp 2x">
+                            <img width="90" height="90" src="./img/reviews-slider/review-2-desktop.webp" alt="текст заглушка альта" loading="lazy">
+                        </picture>
                       </div>
                       <span>Давид Иммервар</span>
                     </div>
@@ -1147,7 +1208,13 @@
                   <div class="review__header">
                     <div class="review__author">
                       <div class="review__avatar-wrapper">
-                        <img src="./img/reviews-slider/review-1-desktop.png" alt="текст заглушка альта">
+                        <picture>
+                          <source media="(min-width: 768px)"
+                          srcset="./img/reviews-slider/review-1-desktop.webp 1x, img/reviews-slider/review-1-desktop@2x.webp 2x">
+                          <source
+                            srcset="./img/reviews-slider/review-1-mobile.webp 1x, img/reviews-slider/review-1-mobile@2x.webp 2x">
+                            <img width="90" height="90" src="./img/reviews-slider/review-1-desktop.webp" alt="текст заглушка альта" loading="lazy">
+                        </picture>
                       </div>
                       <span>Сара Аврахам22</span>
                     </div>
@@ -1178,7 +1245,13 @@
                   <div class="review__header">
                     <div class="review__author">
                       <div class="review__avatar-wrapper">
-                        <img src="./img/reviews-slider/review-2-desktop.png" alt="текст заглушка альта">
+                        <picture>
+                          <source media="(min-width: 768px)"
+                          srcset="./img/reviews-slider/review-2-desktop.webp 1x, img/reviews-slider/review-2-desktop@2x.webp 2x">
+                          <source
+                            srcset="./img/reviews-slider/review-2-mobile.webp 1x, img/reviews-slider/review-2-mobile@2x.webp 2x">
+                            <img width="90" height="90" src="./img/reviews-slider/review-2-desktop.webp" alt="текст заглушка альта" loading="lazy">
+                        </picture>
                       </div>
                       <span>Давид Иммервар22</span>
                     </div>
@@ -1320,23 +1393,12 @@
           </div>
         </div>
       </section>
-
-      <!-- <section class="intro">
-        <div class="container">
-          <h1>Тестовая страница.</h1>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-        </div>
-  </section> -->
     </main>
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__logo-wrapper">
           <a class="footer__home-link" href="index.html">
-            <img src="./img/logo.png" alt="логотип проекта Masa">
+            <img width="52" height="52" src="./img/logo.webp" alt="логотип проекта Masa">
           </a>
         </div>
         <nav class="footer__nav">
@@ -1368,7 +1430,7 @@
         </nav>
         <ul class="footer__socials-list">
           <li class="footer__social-item">
-            <a>
+            <a href="#">
               <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="./img/sprite.svg#icon-vk"></use>
               </svg>
@@ -1376,7 +1438,7 @@
             </a>
           </li>
           <li class="footer__social-item">
-            <a>
+            <a href="#">
               <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="./img/sprite.svg#icon-ok"></use>
               </svg>
@@ -1384,7 +1446,7 @@
             </a>
           </li>
           <li class="footer__social-item">
-            <a>
+            <a href="#">
               <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="./img/sprite.svg#icon-reddit"></use>
               </svg>
@@ -1393,7 +1455,7 @@
           </li>
         </ul>
         <span class="footer__copyrights">Masa © 2023 Все права защищены</span>
-        <a class="footer__privacy-policy">Политика конфиденциальности</a>
+        <a href="#" class="footer__privacy-policy">Политика конфиденциальности</a>
       </div>
     </footer>
   </div>
@@ -1462,36 +1524,6 @@
       </div>
     </div>
   </div>
-
-
-  <!-- <div class="modal modal--preload" data-modal="feedback">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div> -->
-
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

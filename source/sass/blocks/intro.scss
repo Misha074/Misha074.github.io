@@ -88,10 +88,7 @@
 }
 
 .intro__slide {
-  min-height: 800px;
   height: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
   display: flex;
   align-items: end;
   background-size: cover;
@@ -107,83 +104,24 @@
   }
 }
 
+.intro__slide-image-wrapper {
+  width: 100%;
+  height: 100%;
 
-.intro__slide--1 {
-  background-image: url("../img/intro-slider/background-1-desktop.webp");
-
-  @include retina {
-    background-image: url("../img/intro-slider/background-1-desktop@2x.webp");
-  }
-
-  @include vp-1199 {
-    background-image: url("../img/intro-slider/background-1-tablet.webp");
-
-    @include retina {
-      background-image: url("../img/intro-slider/background-1-tablet@2x.webp");
-    }
-  }
-
-  @include vp-767 {
-    background-image: url("../img/intro-slider/background-1-mobile.webp");
-
-    @include retina {
-      background-image: url("../img/intro-slider/background-1-mobile@2x.webp");
-    }
-  }
-}
-
-.intro__slide--2 {
-  background-image: url("../img/intro-slider/background-2-desktop.webp");
-
-  @include retina {
-    background-image: url("../img/intro-slider/background-2-desktop@2x.webp");
-  }
-
-  @include vp-1199 {
-    background-image: url("../img/intro-slider/background-2-tablet.webp");
-
-    @include retina {
-      background-image: url("../img/intro-slider/background-2-tablet@2x.webp");
-    }
-  }
-
-  @include vp-767 {
-    background-image: url("../img/intro-slider/background-2-mobile.webp");
-
-    @include retina {
-      background-image: url("../img/intro-slider/background-2-mobile@2x.webp");
-    }
-  }
-}
-
-.intro__slide--3 {
-  background-image: url("../img/intro-slider/background-3-desktop.webp");
-
-  @include retina {
-    background-image: url("../img/intro-slider/background-3-desktop@2x.webp");
-  }
-
-  @include vp-1199 {
-    background-image: url("../img/intro-slider/background-3-tablet.webp");
-
-    @include retina {
-      background-image: url("../img/intro-slider/background-3-tablet@2x.webp");
-    }
-  }
-
-  @include vp-767 {
-    background-image: url("../img/intro-slider/background-3-mobile.webp");
-
-    @include retina {
-      background-image: url("../img/intro-slider/background-3-mobile@2x.webp");
-    }
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
 
 .intro__slide-container {
-  position: relative;
   display: flex;
   align-items: end;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .intro__slide-mask {

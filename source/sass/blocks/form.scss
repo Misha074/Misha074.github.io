@@ -135,7 +135,8 @@
     input:focus,
     textarea:active,
     textarea:focus,
-    select:active select:focus {
+    select:active,
+    select:focus {
       border-color: $color-default-white;
     }
 
@@ -229,6 +230,7 @@
     button:focus {
       background-color: $color-default-white;
       color: $color-cerulean-blue;
+      outline: none;
 
       span:last-child {
         background-color: $color-cerulean-blue;
@@ -299,7 +301,8 @@
     input:focus,
     textarea:active,
     textarea:focus,
-    select:active select:focus {
+    select:active,
+    select:focus {
       border-color: rgba($color: $color-default-black, $alpha: 1);
     }
 
@@ -366,6 +369,10 @@
       span {
         border-color: rgba($color: $color-default-black, $alpha: 0.3);
       }
+    }
+
+    input[type="checkbox"]:focus + span {
+      border-color: $color-default-black;
     }
   }
 }

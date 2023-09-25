@@ -28,6 +28,7 @@
 .button:focus {
   color: $color-default-white;
   background-color: $color-cerulean-blue;
+  outline: none;
 
   .button__circle {
     color: $color-cerulean-blue;
