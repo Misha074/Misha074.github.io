@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   initIntroSwiper();
+  initAccordions();
 
 
   // Modules
@@ -35,7 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initProgramsSwiper();
     initTabs();
     initNewsSwiper();
-    initAccordions();
     initReviewsSwiper();
     initLeaflet();
     inputValidate();
