@@ -1,0 +1,45 @@
+.main-nav {
+  @include vp-767 {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    gap: 171px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include vp-1023 {
+      gap: 100px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin-right: 3px;
+  }
+
+  &__link {
+    display: block;
+    padding-top: 4px;
+    line-height: 19px;
+    color: $color-charcoal;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__link.is-active {
+    color: $color-royal-blue;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

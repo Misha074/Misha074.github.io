@@ -38,8 +38,32 @@
 
 // Desktop first
 
-@mixin vp-1199 {
-  @media (max-width: ($vp-1200 - 1px)) {
+@mixin vp-1919 {
+  @media (max-width: ($vp-1920 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1499 {
+  @media (max-width: ($vp-1500 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1299 {
+  @media (max-width: ($vp-1300 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1023 {
+  @media (max-width: ($vp-1024 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-849 {
+  @media (max-width: ($vp-850 - 1px)) {
     @content;
   }
 }
@@ -50,7 +74,23 @@
   }
 }
 
-// ---------------------------------
+@mixin vp-649 {
+  @media (max-width: ($vp-650 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-499 {
+  @media (max-width: ($vp-500 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-424 {
+  @media (max-width: ($vp-425 - 1px)) {
+    @content;
+  }
+}
 
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
 // этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта

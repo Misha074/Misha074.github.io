@@ -1,0 +1,139 @@
+.advantage {
+  background-color: $color-snow;
+  padding: 22px 22px 22px 27px;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 23px;
+
+  margin: 0;
+  width: 100%;
+  justify-content: start;
+  cursor: pointer;
+  opacity: 1;
+
+  @include vp-1023 {
+    padding: 15px;
+    padding-left: 20px;
+  }
+
+  &:hover {
+    background-color: #dde6ff;
+    box-shadow: none;
+
+    &__icon-wrapper {
+      background-color: #edf2ff;
+      color: #839dfb;
+    }
+
+    &__title {
+      color: $color-seal-brown;
+    }
+
+    &__description {
+      color: #747474;
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: $color-magnolia;
+    border: 1px solid $color-light-grey;
+    color: #655bd5;
+    position: relative;
+
+    @include vp-1023 {
+      width: 50px;
+      height: 50px;
+    }
+
+    img {
+      max-width: unset;
+    }
+
+    svg {
+      @include vp-1023 {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+
+  &__icon-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 7px;
+    height: 10px;
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    display: none;
+
+    @include vp-1023 {
+      width: 5px;
+      height: 8px;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+  &__text-wrapper {
+    display: block;
+    text-transform: none;
+    text-align: start;
+  }
+
+  &__title {
+    display: block;
+    color: #181515;
+    font-size: 25px;
+    line-height: 1.6em;
+    margin-bottom: 4px;
+
+    @include vp-1023 {
+      font-size: 22px;
+      line-height: 1.3em;
+    }
+  }
+
+  &__description {
+    display: block;
+    color: #747474;
+    font-size: 16px;
+    max-width: 444px;
+    line-height: 1.6em;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 1.4em;
+    }
+  }
+}
+
+
+.advantage.is-active {
+  background-color: $color-royal-blue;
+
+  .advantage__icon-wrapper {
+    background-color: #567ae4;
+    color: #ffffff;
+  }
+
+  .advantage__icon-wrapper::after {
+    display: block;
+  }
+
+  .advantage__title {
+    color: #ffffff;
+  }
+
+  .advantage__description {
+    color: #94b2ef;
+  }
+}

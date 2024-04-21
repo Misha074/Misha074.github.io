@@ -1,0 +1,26 @@
+mixin card(value)
+  .card
+    header.card__header
+      .card__logo-wrapper
+        img(src=value.logo, alt="логотип платформы")
+      +school-rating(value, {showPoints: "true"})
+      h3.card__name!= value.name
+      +course-advantages(value)(class="card__advantages course-advantages")
+    .card__main-info
+      p
+        span Описание:
+        |  !{value.description}
+      p
+        span Старт:
+        |  !{value.start}
+      p
+        span Длительность:
+        |  !{value.lasting}
+    footer.card__footer
+      a.card__more-link.btn(href=value.morelink, target='blank') Подробнее
+      .card__price
+        span.card__price-total!= value.totalprice + ' р'
+        span.card__price-split!= value.splitprice + 'р/мес'
+
+
+

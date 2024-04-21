@@ -1,0 +1,11 @@
+mixin course-promo(value)
+  section.course-promo
+    .container
+      .course-promo__content-wrapper
+        +school-rating(value)
+        h2.course-promo__title
+          | Backend-<br>разработчик на Go
+        p.course-promo__description
+          | На курсе вы научитесь использовать, проектировать и оптимизировать базы данных и эффективно работать с ними через код.
+        +course-advantages(value.advantages).course-promo__advantages
+        +btn({text: "Перейти на сайт", href:"#"}).course-promo__btn.course-promo__btn--link

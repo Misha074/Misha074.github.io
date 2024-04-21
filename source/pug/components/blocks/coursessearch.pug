@@ -1,0 +1,20 @@
+mixin coursessearch(courcesCount, courcesArray, coursesAdvantages, schoolsData, difficultData, additionallyData, documentsData)
+  section.courses-search
+    .container
+      .courses-search__wrapper
+        header.courses-search__header
+          h2.courses-search__header.visually-hidden Поиск курса
+          h3.courses-search__title.courses-search__title--disappear Фильтры
+          +course-advantages-filter(coursesAdvantages)(data-advantages="filter").courses-search__advantages-filter
+          .courses-search__title-wrapper
+            h3.courses-search__title Рекомендуемые курсы
+            span
+              |   #{courcesCount}
+          .courses-search__select-wrapper
+              span Сортировать по
+              +custom-select({error: "Выберите тему обращения", optionsList: [{text: "Стоимости", value: "Стоимости", isActive: true}, {text: "Популярности", value: "Популярности"}, {text: "Отзывам", value: "Отзывам"}, {text: "Возрастанию цены", value: "Возрастанию цены"}, {text: "Убыванию цены", value: "Убыванию цены"}, {text: "Рекомендованные", value: "Рекомендованные"}, {text: "Ближайшие даты", value: "Ближайшие даты"}]})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-3").custom-select.courses-search__select
+          +search-input()
+        +filter(schoolsData, difficultData, additionallyData, documentsData)
+        +output(courcesCount, courcesArray)
+
+

@@ -1,0 +1,4 @@
+mixin list(data, tag, href)
+  ul.list&attributes(attributes)
+    each value in data
+      +list-item({text: value, href: href, tag: tag}).list__item

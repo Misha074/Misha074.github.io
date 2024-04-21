@@ -1,0 +1,12 @@
+- const footerData = {'Категории' : ['Дизайн', 'Программирование', 'Маркетинг', 'Менеджмент', 'Аналитика'], 'Популярные направления' : ['Веб-разработка', 'Java-разработка', 'Python-разработка', 'SMM-продвижение', 'Графический дизайн', 'Дизайн интерьеров'], 'Общая информация' : ['О проекте', 'Политика конфиденциальности', 'Пользовательское соглашение']};
+
+mixin footer(footerMods)
+  footer.footer(class=footerMods)
+    .container
+      .footer__wrapper
+        .footer__nav-logo
+          a.footer__logo(href="#")
+            +icon("footer-logo", 35, 41).footer__logo-icon
+            p.footer__logo-text FindEdu
+          a.footer__privacy-link(href="#") © FindEdu 2022.<br>Все права защищены.
+        +nav-list(footerData, tag="a")

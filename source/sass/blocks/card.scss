@@ -1,0 +1,190 @@
+.card {
+  padding: 28px 26px 24px 27px;
+  position: relative;
+
+  background-color: #f8f7fc;
+  border: 1px solid transparent;
+  border-radius: 27.5px;
+
+  font-size: 14px;
+
+  @include vp-1499 {
+    padding: 29px 20px;
+  }
+
+  @include vp-1023 {
+    padding: 29px 15px 29px 20px;
+  }
+
+  @include vp-767 {
+    padding: 20px 19px 29px 26px;
+  }
+
+  .school-rating__wrapper {
+    display: flex;
+    gap: 10px;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dedede;
+
+    @include vp-767 {
+      border: none;
+    }
+  }
+
+  &__logo-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f3f3f3;
+
+    @include vp-767 {
+      width: 49px;
+      height: 49px;
+    }
+
+    img {
+      @include vp-767 {
+        width: 31px;
+      }
+    }
+  }
+
+  &__name {
+    grid-column: span 2;
+
+    color: $color-nero;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 19px;
+    max-width: 220px;
+
+    @include vp-767 {
+      font-size: 18px;
+      max-width: 190px;
+
+      margin-top: 15px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__advantages {
+    grid-column: span 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+    grid-auto-flow: row;
+    list-style-type: none;
+    padding-left: 10px;
+
+    font-weight: 500;
+
+    li + li {
+      margin-left: 0;
+    }
+
+    @include vp-1499 {
+      font-size: 12px;
+    }
+
+    @include vp-1299 {
+      font-size: 14px;
+    }
+
+    @include vp-1023 {
+      font-size: 12px;
+    }
+
+    @include vp-767 {
+      list-style-type: none;
+      padding-left: 0;
+      row-gap: 9px;
+    }
+  }
+
+  &__main-info {
+    font-weight: 500;
+    margin-top: 14px;
+    margin-bottom: 20px;
+
+    p {
+      margin: 0;
+      line-height: 1.2em;
+    }
+
+    p + p {
+      margin-top: 15px;
+    }
+
+    span {
+      color: $color-nero;
+      font-weight: 600;
+    }
+
+    @include vp-767 {
+      margin-top: 9px;
+      margin-bottom: 43px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include vp-767 {
+      text-align: end;
+      justify-content: end;
+    }
+  }
+
+  &__more-link {
+    @include vp-767 {
+      font-size: 14px;
+      padding: 10px 39px;
+      border-radius: 0 12px 12px 0;
+      position: absolute;
+      left: 0;
+      width: fit-content;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__price-total {
+    font-weight: 600;
+    font-size: 18px;
+    color: $color-black;
+  }
+
+  &__price-split {
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+.card:hover {
+  border-color: 1px solid #f6f3ff;
+
+  .card__more-link:hover {
+    box-shadow: 0 20px 40px -10px rgba(72, 109, 216, 0.6);
+    opacity: 1;
+  }
+}
+

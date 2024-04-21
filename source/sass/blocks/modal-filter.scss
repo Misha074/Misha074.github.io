@@ -1,0 +1,96 @@
+.modal-filter {
+  .checkbox__title {
+    margin: 0 0 31px;
+  }
+
+  & > div:last-child {
+    margin-top: 119px;
+  }
+
+  &__range-slider {
+    position: relative;
+    width: 100%;
+    margin-bottom: 94px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: calc(0px - $padding-horizontal-filter-modal);
+      bottom: -68px;
+      width: calc(100% + 2*$padding-horizontal-filter-modal);
+      height: 1px;
+      background-color: $color-whisper;
+    }
+
+    .range-slider__wrapper {
+      width: 71%;
+    }
+
+    &--price .range-slider__wrapper {
+      width: 100%;
+    }
+
+    &--price::after {
+      bottom: -46px;
+    }
+
+    .range-slider__title {
+      width: 150px;
+      letter-spacing: -1px;
+    }
+  }
+
+  &__checkbox-buttons {
+    position: relative;
+    margin-bottom: 99px;
+    padding-right: 63px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: calc(0px - $padding-horizontal-filter-modal);
+      bottom: -48px;
+      width: calc(100% + 2*$padding-horizontal-filter-modal);
+      height: 1px;
+      background-color: $color-whisper;
+    }
+
+    .checkbox__title {
+      margin: 0 0 24px;
+    }
+
+    .custom-toggle {
+      width: 95%;
+    }
+
+    .custom-toggle label {
+      padding: 11px 21px 8px;
+      line-height: 17px;
+    }
+  }
+
+  &__checkbox--hidden {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    margin-bottom: 95px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: calc(0px - $padding-horizontal-filter-modal);
+      bottom: -48px;
+      width: calc(100% + 2*$padding-horizontal-filter-modal);
+      height: 1px;
+      background-color: $color-whisper;
+    }
+  }
+
+  &__btn-wrapper {
+    text-align: center;
+  }
+}

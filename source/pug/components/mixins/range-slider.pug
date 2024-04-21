@@ -1,0 +1,13 @@
+mixin range-slider(options ={})
+  - const title = options.title ? options.title : ""
+  - const minRange = options.minRange ? options.minRange : false
+  - const maxRange = options.maxRange ? options.maxRange : false
+  - const minValue = options.minValue ? options.minValue : false
+  - const maxValue = options.maxValue ? options.maxValue : false
+    .range-slider&attributes(attributes)
+      h4.range-slider__title
+        | #{title}
+      .range-slider__wrapper(data-range-slider)
+      .range-slider__inputs
+        +custom-input({inputType: "number", inputName: "from", inputValue: minValue, inputMin: minRange})
+        +custom-input({inputType: "number", inputName: "to", inputValue: maxValue, inputMax: maxRange})

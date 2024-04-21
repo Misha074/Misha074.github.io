@@ -1,0 +1,18 @@
+mixin checkbox(options = {})
+  - const title = options.title ? options.title : ""
+  - const type = options.type ? options.type : ""
+  - const data = options.data ? options.data : ""
+
+  .checkbox&attributes(attributes)
+    h4.checkbox__title
+      | #{title}
+    if type == "buttons"
+      ul.checkbox__list(data-list="group-list")
+        each value in data
+          li
+            +custom-toggle(value)
+    else
+      ul.checkbox__list(data-list="group-list")
+          each value in data
+            li
+              +custom-toggle(value).custom-toggle--checkbox

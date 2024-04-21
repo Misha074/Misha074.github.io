@@ -1,0 +1,10 @@
+mixin blog(data)
+  section.blog
+    .container
+      .blog__wrapper
+        h2.blog__title
+          | Наш блог
+        ul.blog__posts-list
+          each value in data
+            li.blog__post-item
+              +post(value)

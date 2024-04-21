@@ -31,7 +31,7 @@
     top: 50%;
     left: 10px;
 
-    transform: translateY(-50%);
+    transform: translateY(-80%);
 
     transition: transform 0.3s ease, opacity 0.3s ease;
 
@@ -247,17 +247,6 @@
       }
     }
   }
-
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
 
   &--placeholder {
     .custom-select__label {

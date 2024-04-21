@@ -1,0 +1,14 @@
+mixin course-advantages(data)
+  ul.course-advantages&attributes(attributes)
+    if data.installment == true
+      li.course-advantages__item.course-advantages__item--installment
+        |  Рассрочка
+    if data.discount == true
+      li.course-advantages__item.course-advantages__item--discount
+        | Скидка
+    if data.taxdeduction == true
+      li.course-advantages__item.course-advantages__item--taxdeduction
+        | Вычет НДФЛ
+    if data.employment == true
+      li.course-advantages__item.course-advantages__item--employment
+        | Трудоустройство

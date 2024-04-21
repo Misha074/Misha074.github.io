@@ -1,0 +1,8 @@
+mixin icon(name, width, height, gradient)
+
+  if gradient
+    svg(width=width, height=height, aria-hidden="true")&attributes(attributes)
+      use(xlink:href="#" + name)
+  else
+    svg(width=width, height=height, aria-hidden="true")&attributes(attributes)
+      use(xlink:href="img/sprite.svg#" + name)

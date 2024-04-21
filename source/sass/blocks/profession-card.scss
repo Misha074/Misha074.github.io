@@ -1,0 +1,302 @@
+.profession-card {
+  padding: 52px 30px 56px 27px;
+  color: $color-night-rider2;
+  border-radius: 56px;
+  background-color: $color-default-white;
+  transition: background-color $trans-default;
+  display: block;
+
+  @include vp-1499 {
+    padding: 52px 25px 95px 22px;
+  }
+
+  @include vp-1023 {
+    padding: 50px 20px 70px 20px;
+  }
+
+  @include vp-767 {
+    padding: 37px 20px 52px 20px;
+    border-radius: 35px;
+  }
+
+  @include vp-424 {
+    padding: 21px 20px 52px 20px;
+    border-radius: 35px;
+  }
+
+  .profession-card__main {
+    @include vp-767 {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.3) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .profession-card__skill:nth-child(odd) {
+    svg {
+      @include vp-767 {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+.profession-card:hover {
+  color: $color-default-white;
+
+  .profession-card__main {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .profession-card__skill:nth-child(odd) {
+    svg {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.profession-card--design {
+  @include vp-767 {
+    background-color: #82b4ff;
+  }
+}
+
+.profession-card--design:hover {
+  background-color: #82b4ff;
+}
+
+.profession-card--programming {
+  @include vp-767 {
+    background-color: #ff89ad;
+  }
+}
+
+.profession-card--programming:hover {
+  background-color: #ff89ad;
+}
+
+.profession-card--management {
+  @include vp-767 {
+    background-color: #ffccbd;
+  }
+}
+
+.profession-card--management:hover {
+  background-color: #ffccbd;
+}
+
+.profession-card--analytics {
+  @include vp-767 {
+    background-color: #ec5381;
+  }
+}
+
+.profession-card--analytics:hover {
+  background-color: #ec5381;
+}
+
+.profession-card--marketing {
+  @include vp-767 {
+    background-color: #ffab6d;
+  }
+}
+
+.profession-card--marketing:hover {
+  background-color: #ffab6d;
+}
+
+.profession-card--finance {
+  @include vp-767 {
+    background-color: #6cb7f2;
+  }
+}
+
+.profession-card--finance:hover {
+  background-color: #6cb7f2;
+}
+
+.profession-card__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 65px;
+  min-height: 70px;
+
+  @include vp-1023 {
+    margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    color: $color-default-white;
+  }
+
+  @include vp-424 {
+    gap: 6px;
+    margin-bottom: 28px;
+  }
+}
+
+.profession-card__icon-wrapper {
+  img {
+    @include vp-767 {
+      width: 50px;
+      height: auto;
+    }
+  }
+}
+
+.profession-card__name {
+  margin: 0;
+  color: inherit;
+  font-size: 25px;
+  font-weight: 500;
+
+  @include vp-767 {
+    font-size: 18px;
+  }
+}
+
+.profession-card__main {
+  font-size: 17px;
+  line-height: 1.6em;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include vp-1499 {
+    font-size: 14px;
+  }
+
+  @include vp-1299 {
+    font-size: 19px;
+  }
+
+  @include vp-1023 {
+    font-size: 15px;
+  }
+
+  @include vp-767 {
+    font-size: 19px;
+    color: $color-default-white;
+    // .profession-card__skill:nth-child(odd)::before,
+    // .profession-card__skill:nth-child(odd)::after {
+    //   background: $color-default-white;
+    // }
+  }
+
+  @include vp-424 {
+    font-size: 12px;
+  }
+}
+
+// .profession-card__rows-wrapper {
+//   background: rgb(0, 0, 0);
+//   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 100%);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+
+//   @include vp-767 {
+//     background: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 100%);
+//   }
+// }
+
+// .profession-card__row {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin: 0;
+
+//   svg {
+//     @include vp-1023 {
+//       width: 13px;
+//       height: 13px;
+//     }
+
+//     @include vp-767 {
+//       color: $color-default-white;
+//     }
+//   }
+// }
+
+.profession-card__skills {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.profession-card__skill {
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.profession-card__skill:nth-child(odd) {
+  margin-right: 30px;
+  width: fit-content;
+  height: auto;
+
+  @include vp-767 {
+    margin-right: 140px;
+  }
+
+  @include vp-649 {
+    margin-right: 30px;
+  }
+
+  svg {
+    margin-left: 10px;
+    margin-top: 5px;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.profession-card__skill:nth-child(even) {
+  flex-basis: 21%;
+
+  svg {
+    display: none;
+  }
+}
+
+// .profession-card__skill:nth-child(odd)::before {
+//   content: "";
+//   width: 8px;
+//   height: 9px;
+//   position: absolute;
+//   top: 50%;
+//   right: -20px;
+//   transform: translateY(-50%) rotate(-45deg) skew(20deg, 20deg);
+//   background: $color-dim-gray;
+
+//   @include vp-767 {
+//     right: -70px;
+//   }
+
+//   @include vp-649 {
+//     right: -20px;
+//   }
+// }
+
+// .profession-card__skill:nth-child(odd)::after {
+//   content: "";
+//   width: 8px;
+//   height: 8px;
+//   position: absolute;
+//   top: 50%;
+//   right: -20px;
+//   transform: translateY(-50%) rotate(45deg) skew(20deg, 20deg);
+//   background: $color-dim-gray;
+
+//   @include vp-767 {
+//     right: -70px;
+//   }
+
+//   @include vp-649 {
+//     right: -20px;
+//   }
+// }

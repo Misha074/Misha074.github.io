@@ -1,0 +1,28 @@
+mixin hero(data)
+  section.hero
+    .container
+      .hero__wrapper
+        .hero__text-wrapper
+          h2.hero__main-header.visually-hidden
+            | Агрегатор обучающих курсов FindEdu
+          .hero__pseudo-header-wrapper
+            p
+              | FindEdu&nbsp;&mdash; все для выбора новой профессии в&nbsp;одном месте
+          .hero__description
+            p
+              | Изучение тем на вебинарах с преподавателями, личные консультации с наставником. После прохождения курса с наставником. После прохождения курса
+          button(type="button").hero__compare-button.btn
+            span
+              | Сравнить курсы
+            span.hero__button-icon-wrapper
+              svg(width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href!="./img/sprite.svg#advantage-2-icon")
+        .hero__images-wrapper
+          .hero__image-wrapper
+            picture
+              source(srcset="./img/content/hero-top-image-1.webp 1x, ./img/content/hero-top-image-1@2x.webp 2x")
+              img(src="./img/content/hero-top-image-1.webp" width=574 height=642 alt="#")
+          .hero__image-wrapper
+            picture
+              source(srcset="./img/content/hero-bottom-image-1.webp 1x, ./img/content/hero-bottom-image-1@2x.webp 2x")
+              img(src="./img/content/hero-bottom-image-1.webp" width=488 height=281 alt="#")

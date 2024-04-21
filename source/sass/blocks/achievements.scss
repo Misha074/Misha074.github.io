@@ -1,124 +1,80 @@
-.achievements__container {
-  padding-bottom: 120px;
+.achievements {
+  .tabs {
+    display: grid;
+    grid-template-columns: 37% 1fr;
+    gap: 48px;
 
-  @include vp-1199 {
-    padding-bottom: 99px;
+    @media (max-width: 1023px) {
+      grid-template-columns: 40% 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 767px) {
+      display: block;
+      padding-top: 33px;
+    }
+
+    &__controls {
+      flex-direction: column;
+      justify-content: flex-end;
+      order: 2;
+      max-width: 630px;
+      gap: 50px;
+      margin-bottom: 0;
+    }
+
+    &__control {
+      border-radius: 30px;
+    }
+
+    &__content {
+      order: 1;
+      margin-bottom: 0;
+    }
+
+    &__element {
+      background-color: unset;
+      width: fit-content;
+      padding: 0;
+      height: max-content;
+    }
   }
 
-  @include vp-767 {
-    padding-bottom: 70px;
-  }
-}
+  &__wrapper {
+    padding: 81px 65px 94px 65px;
+    border-radius: 72px;
+    background-color: $color-default-white;
 
-.achievements__content {
-  padding: 92px 106px 56px 126px;
-  background-color: $color-cerulean-blue;
-  border-radius: 20px;
-
-  @include vp-1199 {
-    padding: 62px 50px 41px 60px;
-  }
-
-  @include vp-767 {
-    padding: 42px 20px 40px 30px;
-  }
-}
-
-.achievements__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 54px 52px;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-
-  @include vp-1199 {
-    gap: 42px 52px;
-  }
-
-  @include vp-767 {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-  }
-}
-
-.achievements__item {
-  display: flex;
-  gap: 37px;
-  border: 1px solid $color-default-white;
-  border-radius: 16px;
-  padding: 29px 29px 29px 60px;
-  color: $color-default-white;
-  position: relative;
-
-  @include vp-1199 {
-    min-width: 263px;
-    padding: 31px 28px 25px 28px;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  @include vp-767 {
-    min-width: unset;
-    padding: 19px 50px 21px 19px;
-  }
-
-  span:first-of-type {
-    display: block;
-    font-size: 26px;
-    line-height: 30px;
-    text-transform: uppercase;
-    white-space: nowrap;
-
-    @include vp-1199 {
-      font-size: 20px;
-      line-height: 22px;
+    @include vp-1023 {
+      padding: 51px 35px 64px 35px;
     }
 
     @include vp-767 {
-      font-size: 16px;
-      line-height: 20px;
-    }
-
-    br {
-      @include vp-767 {
-        display: none;
-      }
+      padding: 49px 0 130px;
+      background-color: unset;
+      position: relative;
     }
   }
 
-  span:last-of-type {
-    position: absolute;
-    content: "";
-    width: 42px;
-    height: 42px;
-    top: -23px;
-    left: -21px;
-    background-color: #316dc2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  &__title {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 27px;
 
-  p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 300;
-    width: fit-content;
+    font-size: 40px;
+    color: $color-black;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2em;
+
+    @include vp-1023 {
+      font-size: 32px;
+    }
 
     @include vp-767 {
-      font-size: 14px;
-      line-height: 20px;
+      font-size: 21px;
+      text-align: start;
+      margin-bottom: 0;
     }
-  }
-}
-
-.achievements__item:nth-child(2n) {
-  gap: 22px;
-
-  @include vp-1199 {
-    gap: 6px;
   }
 }

@@ -1,0 +1,7 @@
+mixin nav-list(data, tag, href)
+  ul.footer__nav-list&attributes(attributes)
+    each value, key in data
+      li.footer__nav-item
+        p.footer__title
+          | #{key}
+        +list(value, tag, href).footer__list

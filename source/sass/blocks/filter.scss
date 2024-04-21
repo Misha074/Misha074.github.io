@@ -1,69 +1,51 @@
 .filter {
   @include vp-767 {
-    width: 290px;
-    overflow: scroll;
-  }
-}
-
-.filter__list {
-  margin: 0;
-  margin-bottom: 40px;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-
-  @include vp-1199 {
-    gap: 10px;
-    margin-bottom: 1px;
+    display: none;
   }
 
-  @include vp-767 {
-    flex-wrap: nowrap;
-    width: fit-content;
-    gap: 12px;
-  }
-}
+  &__options-wrapper {
+    margin-bottom: 20px;
+    padding: 48px 18px 41px 32px;
+    background-color: $color-magnolia;
+    border-radius: 30px;
+    border: 1px solid $color-white-smoke;
 
-.filter__item {
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
+    @include vp-1299 {
+      padding: 30px 20px;
+    }
 
-  @include vp-767 {
-    font-size: 12px;
-    line-height: 12px;
-  }
-}
-
-.filter__button {
-  padding: 12px 25px 10px;
-  border-color: transparent;
-  opacity: 0.6;
-
-  @include vp-1199 {
-    padding: 12px 19px 10px;
+    @include vp-1023 {
+      padding: 20px 15px;
+    }
   }
 
-  @include vp-767 {
-    font-size: 12px;
-    line-height: 12px;
-    padding: 9px 13px 6px;
+  &__range-slider {
+    margin-bottom: 82px;
   }
-}
 
-.filter__button:hover,
-.filter__button:focus {
-  opacity: 1;
-  background-color: transparent;
-  color: $color-cerulean-blue;
-}
+  &__checkbox {
+    margin-bottom: 82px;
+  }
 
-.filter__button--active {
-  border-color: $color-cerulean-blue;
-  color: $color-cerulean-blue;
-  opacity: 1;
+  &__options-wrapper > div:not(:last-child) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -41px;
+      width: 100%;
+      height: 1px;
+      background-color: $color-whisper;
+    }
+  }
+
+  &__options-wrapper > div:last-child {
+    margin-bottom: 20px;
+  }
+
+  &__btn-wrapper {
+    text-align: center;
+  }
 }

@@ -1,0 +1,66 @@
+.advantages-filter {
+  min-width: 290px;
+  margin: 0;
+  padding: 0;
+
+  &__item:not(:first-child):not(:last-child) {
+    margin-left: 11px;
+  }
+
+  .custom-toggle {
+    padding: 0;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    padding: 0;
+
+    @include vp-767 {
+      gap: 7px;
+    }
+  }
+
+  .custom-toggle__label {
+    margin: 0 auto;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
+
+  .custom-toggle__label--installment {
+    color: $color-havelock-blue;
+  }
+
+  .custom-toggle__label--taxdeduction {
+    color: $color-citron;
+  }
+
+  .custom-toggle__label--discount {
+    color: $color-heliotrope;
+  }
+
+  .custom-toggle__label--employment {
+    color: $color-tangerine;
+  }
+
+  .custom-toggle__icon {
+    position: relative;
+    width: 61px;
+    height: 61px;
+    background-color: $color-magnolia;
+    border-radius: 16px;
+    border: 1px solid $color-white-smoke;
+  }
+
+  .custom-toggle input:checked + .custom-toggle__icon {
+    border: 1px solid $color-white-smoke;
+  }
+
+  &__item {
+    list-style: none;
+  }
+}
+

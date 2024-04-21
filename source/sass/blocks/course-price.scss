@@ -1,0 +1,34 @@
+.course-price {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 7px;
+
+  @include vp-767 {
+    gap: 5px;
+  }
+
+  &__total {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    color: $color-nero;
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__split {
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 600;
+    color: $color-grey;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 17px;
+      margin-left: 0;
+    }
+  }
+}

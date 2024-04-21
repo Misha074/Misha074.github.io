@@ -1,50 +1,62 @@
-import {iosVhFix} from './utils/ios-vh-fix';
+import {mobileVhFix} from './utils/mobile-vh-fix.js';
 import {initModals} from './modules/modals/init-modals';
+import {Form} from './modules/form-validate/form';
+import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+import {initSliders} from './modules/init-sliders.js';
+import {initMenuDirections} from './modules/init-menu-directions.js';
+import {initAdvantagesFilter} from './modules/init-advantages-filter.js';
+import {CustomSelect} from './modules/select/custom-select';
+import './modules/init-scrollbar';
+import {initProfessionsSwiper} from './modules/swiper-professions.js';
+import {initCourseCutText, courseCutText} from './modules/school-cut-text.js';
+import './modules/reviews/reviews-show.js';
+import {reviewCuttingText} from './modules/reviews/review-cutting-text.js';
+import {initReviewsSwiper} from './modules/reviews/reviews-swiper.js';
+import {replaceReviewModals} from './modules/reviews/review-replace-modal.js';
+import {initAchievementsTabsSwiper} from './modules/achievements-tabs-swiper.js';
 
-import './modules/nav-toggle/nav-toggle';
-import './modules/filter-buttons-active/filter-buttons-active';
-import {initIntroSwiper} from './modules/swiper-intro/swiper-intro';
-import {initProgramsSwiper} from './modules/swiper-programs/swiper-programs';
-import {initTabs} from './modules/tabs/init-tabs';
-import {initNewsSwiper} from './modules/swiper-news/swiper-news';
-import {initAccordions} from './modules/accordion/init-accordion';
-import {initReviewsSwiper} from './modules/swiper-reviews/swiper-reviews';
-import {initLeaflet} from './modules/leaflet/init-leaflet';
-import {inputValidate} from './modules/input-validate/input-validate';
-import {inputValidateModal} from './modules/input-validate-modal/input-validate-modal';
-
-import './modules/scroll/scroll';
-// ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
 
-  iosVhFix();
-
-  initIntroSwiper();
-  initAccordions();
-
+  mobileVhFix();
 
   // Modules
   // ---------------------------------
+  initMenuDirections();
+  initAdvantagesFilter();
+  initSliders();
+  initCourseCutText();
+  initProfessionsSwiper();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initProgramsSwiper();
-    initTabs();
-    initNewsSwiper();
-    initReviewsSwiper();
-    initLeaflet();
-    inputValidate();
-    inputValidateModal();
-
     initModals();
+    initAchievementsTabsSwiper();
+    const select = new CustomSelect();
+    select.init();
+    const form = new Form();
+    window.form = form;
+    form.init();
+    replaceReviewModals();
+    reviewCuttingText();
+    initReviewsSwiper();
+    uploadFile();
+    uploadImageDrop();
+  });
+
+  window.addEventListener('resize', () => {
+    courseCutText();
+    reviewCuttingText();
+    initReviewsSwiper();
+    initAchievementsTabsSwiper();
+    initProfessionsSwiper();
+    replaceReviewModals();
   });
 });
-
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
@@ -58,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // выносим все в дата атрибуты
 // url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
 
-// для адаптивного JS используется matchMedia и addListener
+// для адаптивного JS используейтся matchMedia и addListener
 // const breakpoint = window.matchMedia(`(min-width:1024px)`);
 // const breakpointChecker = () => {
 //   if (breakpoint.matches) {

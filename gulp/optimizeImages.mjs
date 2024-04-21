@@ -1,39 +1,31 @@
 import gulp from 'gulp';
-import rename from 'gulp-rename';
 import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
-import svgstore from 'gulp-svgstore';
+import avif from 'gulp-avif';
 import pngQuant from 'imagemin-pngquant';
 import mozJpeg from 'imagemin-mozjpeg';
-import svgo from 'imagemin-svgo';
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
+import rename from 'gulp-rename';
+
+const spriteGradient = () =>
+  gulp
+      .src('source/img/sprite/gradient/*.svg')
+      .pipe(svgstore({inlineSvg: true}))
+      .pipe(rename('sprite-gradient.svg'))
+      .pipe(gulp.dest('build/img'));
 
 const sprite = () =>
   gulp
-      .src('source/img/sprite/*.svg')
-      .pipe(svgstore({inlineSvg: true}))
-      .pipe(rename('sprite.svg'))
-      .pipe(gulp.dest('build/img'));
+    .src('source/img/sprite/*.svg')
+        .pipe(svgstore({inlineSvg: true}))
+        .pipe(rename('sprite.svg'))
+        .pipe(gulp.dest('build/img'));
 
 const optimizeSvg = () =>
   gulp
-      .src('build/img/**/*.svg')
-      .pipe(
-          imagemin([
-            svgo({
-              plugins: [
-                {
-                  name: 'removeViewBox',
-                  active: false,
-                },
-                {
-                  name: 'removeRasterImages',
-                  active: true,
-                },
-                {
-                  name: 'removeUselessStrokeAndFill',
-                  active: false,
-                }],
-            })]))
+      .src(['build/img/**/*.svg', '!build/img/sprite.svg'])
+      .pipe(svgo())
       .pipe(gulp.dest('build/img'));
 
 const optimizeJpg = () =>
@@ -74,4 +66,12 @@ const createWebp = () => {
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
-export {sprite, createWebp, optimizeSvg, optimizePng, optimizeJpg};
+const createAvif = () => {
+  const root = '';
+  return gulp
+      .src(`source/img/${root}**/*.{png,jpg}`)
+      .pipe(avif())
+      .pipe(gulp.dest(`source/img/${root}`));
+};
+
+export {sprite, createWebp, createAvif, optimizeSvg, optimizePng, optimizeJpg, spriteGradient};

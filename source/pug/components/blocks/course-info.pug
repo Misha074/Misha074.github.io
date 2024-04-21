@@ -1,0 +1,11 @@
+mixin course-info(value)
+  section.course-info
+    .container
+      h2.course-info__title.visually-hidden Информация о курсе
+      .course-info__course-wrapper
+        +course-price(value).course-info__price
+        +course-description(value).course-info__description(data-description="text")
+        +course-programm(value).course-info__programm
+      .course-info__school-wrapper
+        +school-rating-big(value).course-info__school-rating-big
+        +school-info().course-info__school-info(data-school="text")

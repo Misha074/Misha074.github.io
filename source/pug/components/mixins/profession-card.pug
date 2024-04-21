@@ -1,0 +1,12 @@
+mixin profession-card(value)
+  .profession-card(class!="profession-card--" + value.modifier)
+    header.profession-card__header
+      .profession-card__icon-wrapper
+        img(src=value.icon, alt="#")
+      h3.profession-card__name!=value.name
+    .profession-card__main
+      ul.profession-card__skills
+        each skill in value.skills
+          li.profession-card__skill!=skill
+            svg(width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg")
+              use(xlink:href!="./img/sprite.svg#star-6")

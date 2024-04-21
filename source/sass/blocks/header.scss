@@ -1,55 +1,176 @@
-.header__main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  position: absolute;
-  z-index: 101;
-  top: 0;
-  width: calc(100% - clamp(45px, $padding-desktop, 100px) * 2);
-  max-width: 1240px;
-  left: 50%;
-  transform: translateX(-50%);
-
-
-  padding: 31px 0;
-
-  @include vp-1199 {
-    width: calc(100% - clamp(45px, $padding-tablet, 100px) * 2);
-    padding-top: 30px;
-  }
+.header {
+  position: relative;
+  z-index: 1;
+  border-radius: 55px 55px 0 0;
 
   @include vp-767 {
-    width: calc(100% - clamp(15px, $padding-mobile, 45px) * 2);
-    padding-top: 21px;
+    border-radius: 0;
   }
-}
 
-.header__untouchable-block {
-  display: none;
-}
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-1px);
+    height: 1px;
+    width: 100%;
+    background-color: $color-whisper;
 
-.header__untouchable-block--show {
-  position: fixed;
-  width: 100%;
-  height: 150vh;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  // background-image: $gradient-three;
-  background-color: rgba($color: #000000, $alpha: 0.5);
-  display: block;
-  z-index: 100;
-}
+    @include vp-1499 {
+      display: none;
+    }
 
-.header__home-link:hover,
-.header__home-link:focus {
-  outline: none;
-  opacity: 0.8;
-  filter: drop-shadow(3px 3px $color-cerulean-blue);
-}
+    @include vp-767 {
+      display: block;
+      top: 100%;
+      left: unset;
+      width: 100%;
+    }
+  }
 
-.header__home-link:active {
-  opacity: 1;
-  filter: drop-shadow(3px 3px $color-cerulean-blue);
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    padding: 39px 0 41px;
+
+    @include vp-1499 {
+      justify-content: space-between;
+    }
+
+    @include vp-767 {
+      padding: 18px 0 16px;
+      justify-content: space-between;
+    }
+
+    button {
+      background-color: $color-transparent;
+      border: none;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    gap: 9px;
+    align-items: center;
+    margin-right: 280px;
+    color: $color-default-white;
+
+    @include vp-1499 {
+      margin: 0;
+    }
+  }
+
+  &__logo:hover {
+    opacity: 0.8;
+    transition: $trans-default;
+  }
+
+  &__logo-stroke {
+    color: $color-denim;
+  }
+
+  &__logo-icon {
+    color: $color-transparent;
+
+    @include vp-767 {
+      width: 23px;
+      height: 27px;
+    }
+  }
+
+  &__logo-text {
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: 600;
+    color: $color-denim;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__directions-menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: auto;
+    column-gap: 74px;
+    grid-column: -1/1;
+    padding: 16px 0 15px;
+
+    @include vp-1919 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include vp-1499 {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      column-gap: 50px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -100px;
+      width: calc(100% + 200px);
+      height: 1px;
+      background-color: $color-whisper;
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+      position: relative;
+      padding: 4px 5px;
+      margin-right: 7px;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 600;
+      color: $color-maire;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 54%;
+      right: -6px;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 5px;
+      background-image: url("../img/sprite/arrow-down.svg");
+      background-size: cover;
+    }
+  }
+
+  &__menu-toggle {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+      padding: 4px 0 4px 4px;
+      background-color: $color-default-white;
+      border: none;
+    }
+  }
 }
