@@ -6449,7 +6449,7 @@ button,
     margin-bottom: 43px;
   }
 }
-.review__date {
+.review__date-wrapper {
   font-size: 14px;
   font-weight: 600;
   color: #333333;
@@ -6460,12 +6460,15 @@ button,
           order: 2;
 }
 @media (max-width: 767px) {
-  .review__date {
+  .review__date-wrapper {
     display: block;
     text-align: end;
     font-size: 12px;
     margin-top: 0;
   }
+}
+.review__date-wrapper p {
+  margin-top: 0;
 }
 
 .modal-review {
@@ -6588,7 +6591,7 @@ button,
     margin-bottom: 30px;
   }
 }
-.modal-review__date {
+.modal-review__date-wrapper {
   font-size: 14px;
   font-weight: 600;
   color: #333333;
@@ -6599,12 +6602,15 @@ button,
           order: 2;
 }
 @media (max-width: 767px) {
-  .modal-review__date {
+  .modal-review__date-wrapper {
     display: block;
     text-align: end;
     font-size: 12px;
     margin-top: 0;
   }
+}
+.modal-review__date-wrapper p {
+  margin-top: 0;
 }
 
 .course-price {

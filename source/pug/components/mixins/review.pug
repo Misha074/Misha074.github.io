@@ -1,7 +1,7 @@
 mixin review(value)
   div.review.modalOpenButton(type=button data-open-modal!=value.reviewUniqueNumber)
     header.review__header
-      div.review__author-info
+      .review__author-info
         .review__author-avatar
           img(src=value.reviewAvatar width=61 height=61 alt="Аватар автора отзыва")
         .review__author-main
@@ -10,13 +10,14 @@ mixin review(value)
           span.review__review-origin
             | Отзыв взят с сайта #{value.reviewOrigin}
     .review__main-text!= value.reviewText
-    span.review__date!= value.reviewDate
+    .review__date-wrapper
+      p!= value.reviewDate
   div(class="modal modal-review modal--review" data-modal!=value.reviewUniqueNumber)
     div(class="modal__wrapper")
       div(class="modal__overlay" data-close-modal="")
       div(class="modal__content")
         header.modal-review__header
-          div.modal-review__author-info
+          .modal-review__author-info
             .modal-review__author-avatar
               img(src=value.reviewAvatar width=61 height=61 alt="Аватар автора отзыва")
             .modal-review__author-main
@@ -25,7 +26,8 @@ mixin review(value)
               span.modal-review__review-origin
                 | Отзыв взят с сайта #{value.reviewOrigin}
         .modal-review__main-text.modal-review__main-text--modal!= value.reviewText
-        span.modal-review__date!= value.reviewDate
+        .modal-review__date-wrapper
+          p!= value.reviewDate
         <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal="">
           <svg width="23" height="23" aria-hidden="true">
             <use xlink:href="img/sprite.svg#icon-close"></use>

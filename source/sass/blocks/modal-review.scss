@@ -109,7 +109,7 @@
     }
   }
 
-  &__date {
+  &__date-wrapper {
     font-size: 14px;
     font-weight: 600;
     color: #333333;
@@ -121,6 +121,10 @@
       display: block;
       text-align: end;
       font-size: 12px;
+      margin-top: 0;
+    }
+
+    p {
       margin-top: 0;
     }
   }
