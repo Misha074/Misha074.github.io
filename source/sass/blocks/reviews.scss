@@ -117,5 +117,9 @@
   &__swiper-button {
     width: 37px;
     height: 37px;
+
+    @include vp-767 {
+      cursor: initial;
+    }
   }
 }

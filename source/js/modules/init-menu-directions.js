@@ -22,6 +22,7 @@ export const initMenuDirections = () => {
     let activeSubMenu = 0;
 
     for (let i = 0; i < directionMenuElements.length; i++) {
+
       const onDocumentKeydown = (evt) => {
         if (evt.key === 'Escape') {
           evt.preventDefault();
@@ -35,9 +36,10 @@ export const initMenuDirections = () => {
         }
       };
 
-      const onDirectionElClick = () => {
+      const onDirectionElClick = (evt) => {
         if (activeSubMenu === 0) {
           openDirectionElement();
+          activeSubMenu = evt.target;
         } else {
           for (let j = 0; j < directionMenuElements.length; j++) {
             closeDirectionElement(j);
@@ -55,7 +57,7 @@ export const initMenuDirections = () => {
       };
 
       const closeDirectionElement = (count) => {
-        directionMenuElements[count].classList.remove('is-active');
+        directionMenuElements[count].classList.remove('is-active', 'focus-visible');
         activeSubMenu.classList.remove('is-active');
       };
 

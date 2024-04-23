@@ -4,7 +4,7 @@
   }
 
   & > div:last-child {
-    margin-top: 119px;
+    margin-top: 116px;
   }
 
   &__range-slider {
@@ -69,7 +69,7 @@
     }
   }
 
-  &__checkbox--hidden {
+  .checkbox--hidden {
     @include vp-767 {
       display: none;
     }

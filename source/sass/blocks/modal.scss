@@ -28,7 +28,7 @@
   }
 
   .modal__content {
-    padding: 0 $padding-horizontal-filter-modal 58px;
+    padding: 0 $padding-horizontal-filter-modal 71px;
   }
 }
 
@@ -36,7 +36,7 @@
   display: block;
 
   .modal__content {
-    padding: 0 $padding-horizontal-filter-modal 71px;
+    padding: 0 $padding-horizontal-filter-modal 50px;
   }
 }
 
@@ -154,7 +154,7 @@
       transition: $trans-default;
 
       @include vp-767 {
-        border-bottom: 6px solid $color-royal-blue;
+        border-bottom: 9px solid $color-royal-blue;
       }
     }
   }
@@ -220,8 +220,16 @@
 
   transition: opacity $trans-default;
 
+  @include vp-767 {
+    cursor: initial;
+  }
+
   @include hover-focus {
     opacity: 0.5;
+
+    @include vp-767 {
+      opacity: 1;
+    }
   }
 }
 

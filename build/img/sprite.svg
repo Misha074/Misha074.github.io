@@ -14,7 +14,10 @@
 <rect x="10" y="10" width="12" height="2" rx="1" fill="#171716"/>
 </g></symbol><symbol id="checkbox-icon" viewBox="0 0 9 7"><g fill="none">
 <path d="M1 3.5L3.875 6.5L8 1" stroke="#FAFAFA" stroke-linecap="round" stroke-linejoin="round"/>
-</g></symbol><symbol id="footer-logo" viewBox="0 0 1800 1945"><g fill="none">
+</g></symbol><symbol id="icon-close" viewBox="0 0 23 24"><g fill="none">
+<path d="M5.65723 17.5566L16.9709 6.24293" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.65723 6.24219L16.9709 17.5559" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol><symbol id="logo" viewBox="0 0 1800 1945"><g fill="none">
 <rect x="808.585" y="1944.88" width="377.339" height="161.717" transform="rotate(-90 808.585 1944.88)" fill="currentColor"/>
 <mask id="mask0_551_818" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="-154" width="1800" height="1728">
 <rect y="444.948" width="673.819" height="1266.78" transform="rotate(-26.999 0 444.948)" fill="currentColor"/>
@@ -23,18 +26,6 @@
 <g mask="url(#mask0_551_818)">
 <circle cx="889.434" cy="732.098" r="498.626" stroke="currentColor" stroke-width="134.764"/>
 </g>
-</g></symbol><symbol id="header-logo" viewBox="0 0 1800 1945"><g fill="none">
-<rect x="808.585" y="1944.88" width="377.339" height="161.717" transform="rotate(-90 808.585 1944.88)" fill="#1D5CBB"/>
-<mask id="mask0_551_818" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="-154" width="1800" height="1728">
-<rect y="444.948" width="673.819" height="1266.78" transform="rotate(-26.999 0 444.948)" fill="#C4C4C4"/>
-<rect x="599.654" y="890.399" width="673.819" height="1266.78" transform="rotate(-108.7 599.654 890.399)" fill="#C4C4C4"/>
-</mask>
-<g mask="url(#mask0_551_818)">
-<circle cx="889.434" cy="732.098" r="498.626" stroke="#1D5CBB" stroke-width="134.764"/>
-</g>
-</g></symbol><symbol id="icon-close" viewBox="0 0 23 24"><g fill="none">
-<path d="M5.65723 17.5566L16.9709 6.24293" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.65723 6.24219L16.9709 17.5559" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </g></symbol><symbol id="search-icon" viewBox="0 0 16 16"><g fill="none">
 <path d="M10.334 10.3343L15.0009 15.0012" stroke="#AFAFAF" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M11.8896 6.44479C11.8896 9.45187 9.45187 11.8896 6.44479 11.8896C3.43772 11.8896 1 9.45187 1 6.44479C1 3.43772 3.43772 1 6.44479 1C9.45187 1 11.8896 3.43772 11.8896 6.44479Z" stroke="#AFAFAF" stroke-width="1.3"/>

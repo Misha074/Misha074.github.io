@@ -51,10 +51,6 @@ $color-nero:                        #1a1a1a;
 $color-grey:                        #7d7d7d;
 $color-dim-gray:                    #6b6b6b;
 
-// Gradient
-
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-
 // Typography
 // ---------------------------------
 
@@ -63,7 +59,6 @@ $fz-default:                        16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble:                         "Rouble", "Arial", sans-serif;
 
 $ff-inter:                          "Inter", "Arial", sans-serif;
 

@@ -131,7 +131,6 @@
       font-size: $fz-default;
       line-height: 19px;
       border-radius: 14px;
-      box-shadow: 0 20px 40px -10px rgba($color-royal-blue, $alpha: 0.6);
 
       @include vp-767 {
         width: 100%;

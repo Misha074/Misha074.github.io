@@ -33,14 +33,14 @@ mixin header(headerMods, currentUrl)
         if(currentUrl === "index.html")
           //- lighthouse снимает 10 баллов SEO за <a> без href
           .header__logo
-            +icon("header-logo", 33, 39).header__logo-icon
+            +icon("logo", 33, 39).header__logo-icon
             span.header__logo-text FindEdu
         else
           a.header__logo(href="index.html", aria-label="Переход на главную")
-            +icon("header-logo", 33, 39).header__logo-icon
+            +icon("logo", 33, 39).header__logo-icon
             span.header__logo-text FindEdu
         if (currentUrl === "index.html")
-          a.header__toggle(href="courses.html")
+          a.header__link(href="courses.html")
             | Курсы
         if (currentUrl === "courses.html")
           button.header__toggle(type="button", aria-label="Переключатель отображения фильтра", aria-pressed="false", data-open-modal="filter")

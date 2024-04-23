@@ -158,7 +158,8 @@
     }
 
     img {
-      object-fit: cover;
+      display: block;
+      max-width: unset;
     }
   }
 }

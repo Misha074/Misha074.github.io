@@ -42,6 +42,10 @@
       margin-bottom: 0;
       margin-left: 0;
     }
+
+    @include vp-767 {
+      cursor: initial;
+    }
   }
 
   &--checkbox {

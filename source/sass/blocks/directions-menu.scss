@@ -36,6 +36,7 @@
     margin: 0;
     padding: 31px 35px 31px 0;
     list-style: none;
+    user-select: none;
 
     @include vp-1499 {
       justify-self: start;
@@ -70,33 +71,17 @@
     }
   }
 
-  &__item.is-active {
-    &__list {
-      display: grid;
-      max-height: initial;
-      padding: 51px 61px 26px;
-      border: 1px solid $color-white-smoke-2;
-      grid-template-columns: repeat(2, max-content);
-      column-gap: 161px;
-
-      @include vp-1023 {
-        padding: 51px 45px 26px;
-      }
-
-      @include vp-767 {
-        display: block;
-        grid-template-columns: initial;
-        padding: 0;
-        border: none;
-      }
-    }
-  }
-
   &__item:hover,
   &__item.is-active {
     color: $color-royal-blue;
     cursor: pointer;
     transition: $trans-default;
+
+    @include vp-767 {
+      cursor: initial;
+      transition: none;
+      color: $color-default-black;
+    }
 
     &::after {
       border-top: none;
@@ -105,16 +90,16 @@
       transition: $trans-default;
 
       @include vp-767 {
-        border-bottom: 6px solid $color-royal-blue;
+        // border-bottom: 6px solid $color-royal-blue;
+        border-bottom: none;
+        border-top: 9px solid #bababa;
+        transition: none;
       }
-    }
-
-    &__list {
-      display: grid;
-      cursor: initial;
     }
   }
 
+  &__item [data-accordion="content"]:has(.focus-visible),
+  &__item.focus-visible [data-accordion="content"],
   &__item:hover [data-accordion="content"],
   &__item.is-active [data-accordion="content"] {
     display: grid;
@@ -123,7 +108,7 @@
     border: 1px solid $color-white-smoke-2;
     grid-template-columns: repeat(2, max-content);
     column-gap: 161px;
-    box-shadow: 0 4px 80px 0 rgba($color: #000000, $alpha: 0.05);
+    box-shadow: 0 4px 80px 0 rgba($color: $color-black, $alpha: 0.05);
 
     @include vp-1023 {
       padding: 51px 45px 26px;
@@ -139,17 +124,24 @@
     }
   }
 
+  &__item:nth-child(6n).focus-visible,
   &__item:nth-child(6n):hover,
   &__item:nth-child(6n).is-active {
-    &__list {
+    .directions-menu__list {
       left: initial;
       right: 0;
     }
   }
 
+  &__item:nth-child(6n) .directions-menu__list:has(.focus-visible) {
+    left: initial;
+    right: 0;
+  }
+
+  &__item:nth-child(5n).focus-visible,
   &__item:nth-child(5n):hover,
   &__item:nth-child(5n).is-active {
-    &__list {
+    .directions-menu__list {
       left: initial;
       right: 0;
 
@@ -160,9 +152,20 @@
     }
   }
 
+  &__item:nth-child(5n) .directions-menu__list:has(.focus-visible) {
+    left: initial;
+    right: 0;
+
+    @include vp-1499 {
+      left: 0;
+      right: initial;
+    }
+  }
+
+  &__item:nth-child(3n).focus-visible,
   &__item:nth-child(3n):hover,
   &__item:nth-child(3n).is-active {
-    &__list {
+    .directions-menu__list {
       @include vp-1499 {
         left: initial;
         right: 0;
@@ -170,13 +173,28 @@
     }
   }
 
+  &__item:nth-child(3n) .directions-menu__list:has(.focus-visible) {
+    @include vp-1499 {
+      left: initial;
+      right: 0;
+    }
+  }
+
+  &__item:nth-child(3n+2).focus-visible,
   &__item:nth-child(3n+2):hover,
   &__item:nth-child(3n+2).is-active {
-    &__list {
+    .directions-menu__list {
       @include vp-1023 {
         left: 50%;
         transform: translateX(-50%);
       }
+    }
+  }
+
+  &__item:nth-child(3n+2) .directions-menu__list:has(.focus-visible) {
+    @include vp-1023 {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 

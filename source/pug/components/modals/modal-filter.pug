@@ -2,7 +2,7 @@ mixin modal-filter(schoolsData, difficultData, additionallyData, documentsData)
   .modal-filter&attributes(attributes)
     +range-slider({title: "Стоимость курса", minRange: "0", maxRange: "250000", minValue: "0", maxValue: "87000"}).modal-filter__range-slider.modal-filter__range-slider--price
     +checkbox({title: "Школы", type: "buttons", data: schoolsData}).modal-filter__checkbox-buttons
-    +checkbox({title: "Дополнительно", data: additionallyData}).modal-filter__checkbox--hidden
+    +checkbox({title: "Дополнительно", data: additionallyData}).checkbox--hidden
     +checkbox({title: "Уровень сложности", data: difficultData}).modal-filter__checkbox
     +checkbox({title: "Выдается документ", data: documentsData}).modal-filter__checkbox
     +range-slider({title: "Продолжительность (от 1 до 24 месяцев)", minRange: "1", maxRange: "24", minValue: "1", maxValue: "18"}).modal-filter__range-slider

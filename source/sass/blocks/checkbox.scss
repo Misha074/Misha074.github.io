@@ -1,140 +1,3 @@
-// .checkbox__title {
-//   margin: 0 0 29px;
-//   color: $color-dark-gray;
-//   line-height: 20px;
-
-//   @include vp-1023 {
-//     font-size: 14px;
-//   }
-// }
-
-// .checkbox__list {
-//   display: grid;
-//   grid-template-rows: repeat(5, auto);
-//   margin: 0;
-//   padding: 0;
-
-//   &--scroll {
-//     overflow-y: scroll;
-//     scrollbar-color: $color-royal-blue #c4c4c4;
-//     scrollbar-width: thin;
-//   }
-
-//   li {
-//     list-style: none;
-//   }
-
-//   li:has(.custom-toggle):not(:last-child) {
-//     margin-bottom: 10px;
-//   }
-
-//   li:has(.custom-toggle--checkbox):not(:last-child) {
-//     margin-bottom: 14px;
-//   }
-
-//   .custom-toggle {
-//     width: 86%;
-//     padding: 0;
-//     background-color: $color-magnolia-2;
-//     border: 1px solid $color-white-smoke;
-//     border-radius: 10px;
-//   }
-
-//   .custom-toggle label {
-//     width: 100%;
-//     padding: 9px 25px 8px 32px;
-//     font-size: $fz-default;
-//     line-height: 19px;
-
-//     @include vp-1023 {
-//       font-size: 14px;
-//     }
-//   }
-
-//   .custom-toggle--checkbox label {
-//     padding: 0 0 0 32px;
-//   }
-
-//   .custom-toggle .custom-toggle__label {
-//     display: block;
-//     color: $color-maire;
-//   }
-
-//   .custom-toggle:hover {
-//     border-color: $color-royal-blue;
-//   }
-
-//   .custom-toggle.custom-toggle--checkbox label:hover > .custom-toggle__icon {
-//     border-color: $color-royal-blue;
-//   }
-
-//   .custom-toggle.custom-toggle--checkbox label:hover .custom-toggle__icon {
-//     opacity: 0.8;
-//   }
-// }
-
-// .checkbox__list .custom-toggle--checkbox {
-//   width: 100%;
-//   padding: 0;
-//   background-color: $color-transparent;
-//   border: none;
-
-//   .custom-toggle__icon {
-//     top: 50%;
-//     transform: translateY(-50%);
-//     width: 20px;
-//     height: 20px;
-//     border-radius: 6px;
-//     border: 1px solid $color-dark-gray;
-//   }
-// }
-
-// .checkbox__list .custom-toggle:has(input:checked) {
-//   border-color: $color-transparent;
-//   background-color: $color-royal-blue;
-//   border-radius: 10px;
-// }
-
-// .checkbox__list .custom-toggle input:checked ~ .custom-toggle__label {
-//   color: $color-snow;
-// }
-
-// .checkbox__list .custom-toggle input:checked + .custom-toggle__icon {
-//   border: none;
-// }
-
-// .checkbox__list .custom-toggle--checkbox input:checked ~ .custom-toggle__label {
-//   color: initial;
-// }
-
-// .checkbox__list .custom-toggle--checkbox input:checked + .custom-toggle__icon {
-//   border-color: $color-transparent;
-// }
-
-// .checkbox__list .custom-toggle--checkbox input + .custom-toggle__icon::before {
-//   border-radius: 6px;
-// }
-
-// .checkbox__list .custom-toggle--checkbox:has(input:checked) {
-//   background-color: initial;
-// }
-
-// .checkbox__list .custom-toggle--checkbox input:checked + .custom-toggle__icon::before {
-//   background-color: $color-royal-blue;
-// }
-
-// .checkbox__list .custom-toggle--checkbox input:checked + .custom-toggle__icon::after {
-//   position: absolute;
-//   content: "";
-//   width: 7px;
-//   height: 6px;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-image: url("../img/sprite/checkbox-icon.svg");
-//   background-size: cover;
-// }
-
 .checkbox {
   &__title {
     margin: 0 0 29px;
@@ -167,7 +30,7 @@
     }
 
     li:has(.custom-toggle--checkbox):not(:last-child) {
-      margin-bottom: 14px;
+      margin-bottom: 11px;
     }
 
     .custom-toggle {
@@ -176,6 +39,11 @@
       background-color: $color-magnolia-2;
       border: 1px solid $color-white-smoke;
       border-radius: 10px;
+      user-select: none;
+    }
+
+    .custom-toggle:has(input.focus-visible) {
+      border-color: $color-royal-blue;
     }
 
     .custom-toggle label {
@@ -200,14 +68,26 @@
 
     .custom-toggle:hover {
       border-color: $color-royal-blue;
+
+      @include vp-767 {
+        border-color: $color-transparent;
+      }
     }
 
-    .custom-toggle.custom-toggle--checkbox label:hover > .custom-toggle__icon {
+    .custom-toggle--checkbox:hover {
+      border-color: $color-transparent;
+    }
+
+    .custom-toggle--checkbox:hover .custom-toggle__icon {
       border-color: $color-royal-blue;
     }
 
     .custom-toggle.custom-toggle--checkbox label:hover .custom-toggle__icon {
       opacity: 0.8;
+
+      @include vp-767 {
+        opacity: 1;
+      }
     }
   }
 
@@ -215,7 +95,6 @@
     width: 100%;
     padding: 0;
     background-color: $color-transparent;
-    border: none;
 
     .custom-toggle__icon {
       top: 50%;
@@ -255,6 +134,10 @@
 
   &__list .custom-toggle--checkbox:has(input:checked) {
     background-color: initial;
+  }
+
+  &__list .custom-toggle--checkbox:has(input.focus-visible) {
+    border: 1px solid $color-royal-blue;
   }
 
   &__list .custom-toggle--checkbox input:checked + .custom-toggle__icon::before {

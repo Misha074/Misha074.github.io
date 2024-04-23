@@ -580,7 +580,7 @@
         <div class="container">
           <div class="header__wrapper"><a class="header__logo" href="index.html" aria-label="Переход на главную">
               <svg class="header__logo-icon" width="33" height="39" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#header-logo"></use>
+                <use xlink:href="img/sprite.svg#logo"></use>
               </svg><span class="header__logo-text">FindEdu</span></a>
             <button class="header__menu-toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-open-modal="burger">
               <svg width="22" height="12" aria-hidden="true">
@@ -599,7 +599,7 @@
             </nav>
           </div>
           <ul class="directions-menu accordion accordion header__directions-menu" data-directions="menu" data-accordion="parent">
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Дизайн
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Дизайн
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -658,7 +658,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Программирование
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Программирование
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -675,7 +675,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Аналитика
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Аналитика
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -692,7 +692,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Менеджмент
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Менеджмент
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -709,7 +709,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Маркетинг
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Маркетинг
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -726,7 +726,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Финансы
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Финансы
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -1255,7 +1255,11 @@
                 <li>
                   <div class="card">
                     <header class="card__header">
-                      <div class="card__logo-wrapper"><img src="./img/content/card-logo-1.png" alt="логотип платформы"></div>
+                      <div class="card__logo-wrapper">
+                        <picture>
+                          <source srcset="./img/content/card-logo-1.webp 1x,./img/content/card-logo-1@2x.webp 2x"><img src="./img/content/card-logo-1.webp" width="36" height="36" alt="Логотип платформы">
+                        </picture>
+                      </div>
                       <div class="school-rating">
                         <div class="school-rating__wrapper"><span class="school-rating__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.6</span></div><span class="school-rating__title">Skillbox</span>
                       </div>
@@ -1280,7 +1284,11 @@
                 <li>
                   <div class="card">
                     <header class="card__header">
-                      <div class="card__logo-wrapper"><img src="./img/content/card-logo-1.png" alt="логотип платформы"></div>
+                      <div class="card__logo-wrapper">
+                        <picture>
+                          <source srcset="./img/content/card-logo-1.webp 1x,./img/content/card-logo-1@2x.webp 2x"><img src="./img/content/card-logo-1.webp" width="36" height="36" alt="Логотип платформы">
+                        </picture>
+                      </div>
                       <div class="school-rating">
                         <div class="school-rating__wrapper"><span class="school-rating__stars">&#9733;&#9733;&#9733;&#9733;</span><span>3.6</span></div><span class="school-rating__title">Skillbox</span>
                       </div>
@@ -1305,7 +1313,11 @@
                 <li>
                   <div class="card">
                     <header class="card__header">
-                      <div class="card__logo-wrapper"><img src="./img/content/card-logo-1.png" alt="логотип платформы"></div>
+                      <div class="card__logo-wrapper">
+                        <picture>
+                          <source srcset="./img/content/card-logo-1.webp 1x,./img/content/card-logo-1@2x.webp 2x"><img src="./img/content/card-logo-1.webp" width="36" height="36" alt="Логотип платформы">
+                        </picture>
+                      </div>
                       <div class="school-rating">
                         <div class="school-rating__wrapper"><span class="school-rating__stars">&#9733;&#9733;&#9733;</span><span>2.7</span></div><span class="school-rating__title">Skillbox</span>
                       </div>
@@ -1330,7 +1342,11 @@
                 <li>
                   <div class="card">
                     <header class="card__header">
-                      <div class="card__logo-wrapper"><img src="./img/content/card-logo-1.png" alt="логотип платформы"></div>
+                      <div class="card__logo-wrapper">
+                        <picture>
+                          <source srcset="./img/content/card-logo-1.webp 1x,./img/content/card-logo-1@2x.webp 2x"><img src="./img/content/card-logo-1.webp" width="36" height="36" alt="Логотип платформы">
+                        </picture>
+                      </div>
                       <div class="school-rating">
                         <div class="school-rating__wrapper"><span class="school-rating__stars">&#9733;</span><span>1.3</span></div><span class="school-rating__title">Skillbox</span>
                       </div>
@@ -1362,7 +1378,7 @@
           <div class="footer__wrapper">
             <div class="footer__nav-logo"><a class="footer__logo" href="#">
                 <svg class="footer__logo-icon" width="35" height="41" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#footer-logo"></use>
+                  <use xlink:href="img/sprite.svg#logo"></use>
                 </svg>
                 <p class="footer__logo-text">FindEdu</p></a><a class="footer__privacy-link" href="#">© FindEdu 2022.<br>Все права защищены.</a></div>
             <ul class="footer__nav-list">
@@ -1436,7 +1452,7 @@
             <div class="container">
               <div class="header__wrapper"><a class="header__logo" href="index.html" aria-label="Переход на главную">
                   <svg class="header__logo-icon" width="33" height="39" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#header-logo"></use>
+                    <use xlink:href="img/sprite.svg#logo"></use>
                   </svg><span class="header__logo-text">FindEdu</span></a>
                 <button class="header__menu-toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-open-modal="burger">
                   <svg width="22" height="12" aria-hidden="true">
@@ -1455,7 +1471,7 @@
                 </nav>
               </div>
               <ul class="directions-menu accordion accordion header__directions-menu" data-directions="menu" data-accordion="parent">
-                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Дизайн
+                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Дизайн
                   <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
                   <ul class="list directions-menu__list accordion__content" data-accordion="content">
                     <li class="list__item">
@@ -1514,7 +1530,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Программирование
+                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Программирование
                   <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
                   <ul class="list directions-menu__list accordion__content" data-accordion="content">
                     <li class="list__item">
@@ -1531,7 +1547,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Аналитика
+                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Аналитика
                   <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
                   <ul class="list directions-menu__list accordion__content" data-accordion="content">
                     <li class="list__item">
@@ -1548,7 +1564,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Менеджмент
+                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Менеджмент
                   <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
                   <ul class="list directions-menu__list accordion__content" data-accordion="content">
                     <li class="list__item">
@@ -1565,7 +1581,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Маркетинг
+                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Маркетинг
                   <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
                   <ul class="list directions-menu__list accordion__content" data-accordion="content">
                     <li class="list__item">
@@ -1582,7 +1598,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Финансы
+                <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Финансы
                   <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
                   <ul class="list directions-menu__list accordion__content" data-accordion="content">
                     <li class="list__item">
@@ -1603,7 +1619,7 @@
             </div>
           </header>
           <ul class="directions-menu accordion" data-accordion="parent">
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Дизайн
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Дизайн
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -1662,7 +1678,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Программирование
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Программирование
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -1679,7 +1695,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Аналитика
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Аналитика
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -1696,7 +1712,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Менеджмент
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Менеджмент
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -1713,7 +1729,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Маркетинг
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Маркетинг
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">
@@ -1730,7 +1746,7 @@
                 </li>
               </ul>
             </li>
-            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element">Финансы
+            <li class="directions-menu__item accordion__element" data-directions="submenu" data-accordion="element" tabindex="0">Финансы
               <button class="btn directions-menu__item-button accordion__button" type="button" data-accordion="button">Открыть</button>
               <ul class="list directions-menu__list accordion__content" data-accordion="content">
                 <li class="list__item">

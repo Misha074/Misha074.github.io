@@ -5,7 +5,7 @@ mixin post(value)
       .post__image-wrapper
         picture
           source(srcset!="./img/content/" + value.imageName + ".webp 1x," +  "./img/content/" + value.imageName + "@2x.webp 2x")
-          img(src!="./img/content/" + value.imageName +".webp" width=411 height=287 alt="#")
+          img(src!="./img/content/" + value.imageName +".webp" width=411 height=286 alt="#")
       a.post__title-link(href!=value.link target=blank)!=value.title
       p.post__description!=value.description
 

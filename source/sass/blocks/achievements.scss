@@ -77,4 +77,10 @@
       margin-bottom: 0;
     }
   }
+
+  &__swiper-button:hover {
+    @include vp-767 {
+      cursor: initial;
+    }
+  }
 }

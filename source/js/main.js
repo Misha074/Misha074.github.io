@@ -1,6 +1,5 @@
 import {mobileVhFix} from './utils/mobile-vh-fix.js';
 import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initSliders} from './modules/init-sliders.js';
 import {initMenuDirections} from './modules/init-menu-directions.js';
@@ -38,9 +37,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initAchievementsTabsSwiper();
     const select = new CustomSelect();
     select.init();
-    const form = new Form();
-    window.form = form;
-    form.init();
     replaceReviewModals();
     reviewCuttingText();
     initReviewsSwiper();
@@ -49,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('resize', () => {
+    initMenuDirections();
     courseCutText();
     reviewCuttingText();
     initReviewsSwiper();

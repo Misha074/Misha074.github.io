@@ -2,7 +2,9 @@ mixin card(value)
   .card
     header.card__header
       .card__logo-wrapper
-        img(src=value.logo, alt="логотип платформы")
+        picture
+          source(srcset!="./img/content/" + value.icon + ".webp 1x," +  "./img/content/" + value.icon + "@2x.webp 2x")
+          img(src!="./img/content/" + value.icon +".webp" width=36 height=36 alt="Логотип платформы")
       +school-rating(value, {showPoints: "true"})
       h3.card__name!= value.name
       +course-advantages(value)(class="card__advantages course-advantages")
