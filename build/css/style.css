@@ -1793,7 +1793,7 @@ button,
   content: "";
   width: 35px;
   height: 35px;
-  background-image: url(../../img//svg/button-arrow.svg);
+  background-image: url(../../img/button-arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   z-index: 2;
