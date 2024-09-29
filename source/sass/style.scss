@@ -4,11 +4,6 @@
 @import "vendor/normalize";
 // Swiper 8.4.7
 @import "vendor/swiper";
-@import "vendor/accordion";
-@import "vendor/data-accordion";
-@import "vendor/tabs";
-@import "vendor/data-tabs";
-@import "vendor/nouislider";
 
 // Global
 // ---------------------------------
@@ -22,47 +17,24 @@
 
 // Blocks
 // ---------------------------------
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/nav";
+@import "blocks/account";
+@import "blocks/intro";
+@import "blocks/article";
+@import "blocks/explication";
+@import "blocks/thesis";
+@import "blocks/adobe-products";
 @import "blocks/blog";
 @import "blocks/post";
-@import "blocks/list-item";
-@import "blocks/list";
+@import "blocks/portfolio";
 @import "blocks/btn";
-@import "blocks/directions-menu";
-@import "blocks/header";
-@import "blocks/main-nav";
-@import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
-@import "blocks/input-upload";
-@import "blocks/school-rating";
-@import "blocks/output";
-@import "blocks/similar";
-@import "blocks/card";
-@import "blocks/course-advantages";
-@import "blocks/range-slider";
-@import "blocks/checkbox";
-@import "blocks/filter";
-@import "blocks/modal-filter";
-@import "blocks/advantages-filter";
-@import "blocks/courses-search";
-@import "blocks/achievements";
-@import "blocks/advantage";
-@import "blocks/advantage-card";
-@import "blocks/course-promo";
-@import "blocks/hero";
-@import "blocks/professions";
-@import "blocks/profession-card";
-@import "blocks/reviews";
-@import "blocks/review";
-@import "blocks/modal-review";
-@import "blocks/course-price";
-@import "blocks/course-description";
-@import "blocks/course-programm";
-@import "blocks/school-rating-big";
-@import "blocks/school-info";
-@import "blocks/course-info";
 
 // ---------------------------------
 

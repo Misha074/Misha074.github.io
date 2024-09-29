@@ -9,25 +9,6 @@ export class Validator {
     this._getMailRegEx = getMailRegEx;
     this._matrixReplace = matrixReplace;
     this._message = new Message();
-    this._invalidNotEmpty = false;
-    this._validState = true;
-    this._submitEvent = false;
-  }
-
-  _createStates(item) {
-    this._validState = true;
-    this._invalidNotEmpty = false;
-    const parent = item.closest('[data-form-validate]');
-    const formElements = parent.querySelectorAll('input', 'select', 'textarea');
-    formElements.forEach((element) => {
-      if (element.getAttribute('aria-invalid') === 'true') {
-        this._validState = false;
-        if (element.value) {
-          this._invalidNotEmpty = true;
-        }
-      }
-    });
-    this._validateFormParent(parent);
   }
 
   _renderMessage(trigger, parent, input) {
@@ -240,14 +221,6 @@ export class Validator {
     return flag;
   }
 
-  _customUpload(parent, input) {
-    let flag = true;
-    if (parent.classList.contains('is-invalid') || !input.files[0]) {
-      flag = false;
-    }
-    return flag;
-  }
-
   _validateInput(type, parent, input) {
     switch (type) {
       case 'text':
@@ -266,40 +239,8 @@ export class Validator {
         return this._validateToggleGroup(parent, input);
       case 'file':
         return this._validateFile(parent, input);
-      case 'custom-upload':
-        return this._customUpload(parent, input);
       case 'custom-example':
         return this._customExample(parent, input);
-      default:
-        return false;
-    }
-  }
-
-  _baseParentValidate(formParent) {
-    if (!this._submitEvent) {
-      return;
-    }
-
-    if (!this._invalidNotEmpty && !this._validState) {
-      this._message.renderMessage(formParent, formParent.dataset.messageBase, 'invalid');
-      return;
-    }
-
-    if (this._invalidNotEmpty && !this._validState) {
-      this._message.renderMessage(formParent, formParent.dataset.messageExtra || formParent.dataset.messageBase, 'invalid');
-      return;
-    }
-
-    if (this._validState) {
-      this._message.removeMessage(formParent);
-      return;
-    }
-  }
-
-  _validateParent(formParent, type) {
-    switch (type) {
-      case 'base':
-        return this._baseParentValidate(formParent);
       default:
         return false;
     }
@@ -338,35 +279,20 @@ export class Validator {
   }
 
   _fullValidate(items) {
-    let isValid = true;
+    let result = true;
     items.forEach((item) => {
       const formElement = item.querySelector('input') || item.querySelector('select') || item.querySelector('textarea');
       this.validateFormElement(formElement, true);
       if (item.classList.contains('is-invalid')) {
-        isValid = false;
+        result = false;
       }
     });
-    return isValid;
-  }
-
-  validateForm(event) {
-    if (event.type === 'submit') {
-      this._submitEvent = true;
-    }
-    const validateItems = event.target.querySelectorAll('[data-validate-type]');
-    const result = this._fullValidate(validateItems);
-    this._createStates(event.target);
     return result;
   }
 
-  _reset() {
-    this._submitEvent = false;
-  }
-
-  _validateFormParent(element) {
-    const formParent = element.closest('[data-form-validate]');
-    if (formParent.dataset.parentValidate) {
-      this._validateParent(formParent, formParent.dataset.parentValidate);
-    }
+  validateForm(form) {
+    const validateItems = form.querySelectorAll('[data-validate-type]');
+    const result = this._fullValidate(validateItems);
+    return result;
   }
 }

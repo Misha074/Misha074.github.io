@@ -1,59 +1,32 @@
-import {mobileVhFix} from './utils/mobile-vh-fix.js';
+import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
-import {initSliders} from './modules/init-sliders.js';
-import {initMenuDirections} from './modules/init-menu-directions.js';
-import {initAdvantagesFilter} from './modules/init-advantages-filter.js';
-import {CustomSelect} from './modules/select/custom-select';
-import './modules/init-scrollbar';
-import {initProfessionsSwiper} from './modules/swiper-professions.js';
-import {initCourseCutText, courseCutText} from './modules/school-cut-text.js';
-import './modules/reviews/reviews-show.js';
-import {reviewCuttingText} from './modules/reviews/review-cutting-text.js';
-import {initReviewsSwiper} from './modules/reviews/reviews-swiper.js';
-import {replaceReviewModals} from './modules/reviews/review-replace-modal.js';
-import {initAchievementsTabsSwiper} from './modules/achievements-tabs-swiper.js';
+import {Form} from './modules/form-validate/form';
 
+import {initPortfolioSwiper} from './modules/swiper-portfolio/swiper-portfolio';
+
+// ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
 
-  mobileVhFix();
+  iosVhFix();
 
   // Modules
   // ---------------------------------
-  initMenuDirections();
-  initAdvantagesFilter();
-  initSliders();
-  initCourseCutText();
-  initProfessionsSwiper();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    initAchievementsTabsSwiper();
-    const select = new CustomSelect();
-    select.init();
-    replaceReviewModals();
-    reviewCuttingText();
-    initReviewsSwiper();
-    uploadFile();
-    uploadImageDrop();
-  });
-
-  window.addEventListener('resize', () => {
-    initMenuDirections();
-    courseCutText();
-    reviewCuttingText();
-    initReviewsSwiper();
-    initAchievementsTabsSwiper();
-    initProfessionsSwiper();
-    replaceReviewModals();
+    const form = new Form();
+    window.form = form;
+    form.init();
+    initPortfolioSwiper();
   });
 });
+
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
@@ -67,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // выносим все в дата атрибуты
 // url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
 
-// для адаптивного JS используейтся matchMedia и addListener
+// для адаптивного JS используется matchMedia и addListener
 // const breakpoint = window.matchMedia(`(min-width:1024px)`);
 // const breakpointChecker = () => {
 //   if (breakpoint.matches) {

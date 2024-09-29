@@ -16,8 +16,8 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-inter;
-  color: $color-default-black;
+  font-family: $font-gothampro;
+  color: $color-default-white;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,31 +31,11 @@ body {
   width: 100%;
   height: 100%;
 
-  background-color: $color-snow;
-}
-
-h2 {
-  font-size: 25px;
-  font-weight: 600;
-
-  margin-bottom: 70px;
-  margin-top: 0;
-  color: $color-black;
-}
-
-h3 {
-  font-size: 22px;
-  font-weight: 500;
-  color: #141417;
-
-  @include vp-767 {
-    font-size: 20px;
-    line-height: 1.28em;
-  }
+  background-color: $color-jaguar;
 }
 
 a {
-  color: $color-default-black;
+  color: $color-default-white;
   text-decoration: none;
 }
 

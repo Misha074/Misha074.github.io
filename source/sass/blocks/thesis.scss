@@ -1,0 +1,38 @@
+.thesis {
+
+}
+
+.thesis__main-idea {
+  margin: 0;
+  margin-bottom: 60px;
+  padding-left: 120px;
+}
+
+.thesis__content {
+  padding-left: 120px;
+
+  p {
+    margin: 0;
+  }
+
+  p+p {
+    margin-top: 20px;
+  }
+}
+
+.thesis__media-info {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
+.thesis__description {
+  p {
+    margin: 0;
+  }
+
+  p+p {
+    margin-top: 10px;
+  }
+}

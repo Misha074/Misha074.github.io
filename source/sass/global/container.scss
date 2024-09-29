@@ -2,21 +2,17 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 clamp(100px, $padding-desktop-large, 321px);
+  padding: 0 250px;
 
-  @include vp-1919 {
-    padding: 0 clamp(100px, $padding-desktop-medium, 250px);
-  }
-
-  @include vp-1299 {
-    padding: 0 clamp(50px, $padding-desktop-small, 100px);
+  @include vp-1439 {
+    padding: 0 32px;
   }
 
   @include vp-1023 {
-    padding: 0 clamp(30px, $padding-tablet, 100px);
+    padding: 0 24px;
   }
 
   @include vp-767 {
-    padding: 0 clamp(20px, $padding-mobile, 45px);
+    padding: 0 16px;
   }
 }

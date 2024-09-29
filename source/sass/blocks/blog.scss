@@ -1,37 +1,16 @@
 .blog {
-  &__wrapper {
-    padding-top: 131px;
-    padding-bottom: 132px;
-
-    @include vp-767 {
-      padding-top: 0;
-    }
-  }
-
-  &__title {
-    display: none;
-
-    @include vp-767 {
-      display: block;
-      font-size: 21px;
-      font-weight: 700;
-      color: $color-black;
-      margin-bottom: 30px;
-    }
-  }
-
-  &__posts-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 23px;
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    @include vp-767 {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-  }
 }
+
+.blog__title {}
+
+.blog__posts-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog__post {}

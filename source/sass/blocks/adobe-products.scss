@@ -1,0 +1,27 @@
+.adobe-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 40px;
+  justify-content: flex-start;
+
+  p {
+    margin: 0;
+    grid-column: span 3;
+    text-align: end;
+  }
+}
+
+.adobe-products__product {
+  max-width: 268px;
+}
+
+.adobe-products__product-link {
+  background-color: $color-default-white;
+  border-radius: 12px;
+  padding: 11px 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 62px;
+}

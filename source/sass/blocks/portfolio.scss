@@ -1,0 +1,23 @@
+.portfolio {
+  &__container {
+    padding-bottom: 50px;
+  }
+
+  &__swiper-wrapper {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: 580px;
+    // gap: 20px;
+    // width: 2110px !important;
+  }
+
+  &__slide {
+    height: calc((100% - 20px) / 2) !important;
+    width: 402px !important;
+  }
+
+  &__slide:nth-child(2n) {
+    transform: translateX(-100px);
+  }
+}
