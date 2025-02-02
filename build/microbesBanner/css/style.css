@@ -319,14 +319,14 @@ template {
   font-weight: 500;
   font-family: "Gotham Pro";
   font-display: swap;
-  src: url("/fonts/gothampro_medium.ttf") format("truetype");
+  src: url("../fonts/gothampro_medium.ttf") format("truetype");
 }
 @font-face {
   font-style: normal;
   font-weight: 700;
   font-family: "Gotham Pro";
   font-display: swap;
-  src: url("/fonts/gothampro_bold.ttf") format("truetype");
+  src: url("../fonts/gothampro_bold.ttf") format("truetype");
 }
 *,
 *::before,
