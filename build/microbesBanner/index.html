@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание проекта">
   <title>MicrobesBanner</title>
   <link rel="stylesheet" href="css/style.min.css">
@@ -12,201 +12,190 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container">
-        <h1 class="visually-hidden">Микробный баннер</h1>
-      </div>
-    </header>
     <main>
-      <section class="banner" id="banner">
-        <div class="banner__wrapper">
-          <div class="banner__background-wrapper">
-            <img id="background-image" width="3920" height="1268" src="./img/background-clear.png"
-              alt="текст заглушка альта" loading="lazy">
-            <div class="sprayer" id="sprayer">
-              <picture>
-                <source srcset="img/sprayer.webp 1x, img/sprayer@2x.webp 2x">
-                <img width="273" height="523" src="./img/sprayer.png" alt="текст заглушка альта" loading="lazy">
-              </picture>
+      <div class="banner" id="banner">
+        <div class="banner__wrapper" id="bannerWrapper">
+          <!-- Начальный баннер -->
+          <div class="start-banner" id="startBanner">
+            <img width="1080" height="810" src="./img/start-background@2x.webp" alt="текст заглушка альта"
+              loading="lazy">
 
+            <div class="start-banner__gradient" id="startGradient"></div>
+            <div class="start-banner__text" id="startText">
+              <p>
+                <span class="start-banner__row start-banner__row--1" id="startRow1">Сколько грязи<br> и бактерий
+                  сможет<br> удалить новая</span>
+                <span class="start-banner__row start-banner__row--2" id="startRow2">&nbsp;крем-пена?&nbsp;</span>
+                <span class="start-banner__row start-banner__row--3" id="startRow3">Сыграй в игру,<br> чтобы очистить дом</span>
+              </p>
+              <button class="btn" id="startButton">Играть</button>
             </div>
 
-            <div class="timer" id="timer">
-              <span class="timer__timerline" id="timerLine"></span>
+            <div class="bacteria bacteria--start-1" id="startBacteria-1">
+              <img width="493" height="493" src="./img/bacteria-1@2x.webp" alt="текст заглушка альта" loading="lazy">
             </div>
-          </div>
 
+            <div class="bacteria bacteria--start-2" id="startBacteria-2">
+              <img width="493" height="493" src="./img/bacteria-2@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
 
-          <!-- Бактерия 1 -->
-          <div class="dirt-group dirt-group--1" id="dirtGroup-1">
-            <picture>
-              <source srcset="img/dirt-group-1.webp 1x, img/dirt-group-1@2x.webp 2x">
-              <img width="757" height="749" src="./img/dirt-group-1.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <div class="foam foam--1" id="foam-1">
-            <picture>
-              <source srcset="img/foam-1.webp 1x, img/foam-1@2x.webp 2x">
-              <img width="813" height="940" src="./img/foam-1.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <button class="bacteria bacteria--1" id="bacteria-1">
-            <picture>
-              <source srcset="img/bacteria-1.webp 1x, img/bacteria-1@2x.webp 2x">
-              <img width="493" height="493" src="./img/bacteria-1.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </button>
-          <!-- Бактерия 1 -->
+            <div class="bacteria bacteria--start-3" id="startBacteria-3">
+              <img width="493" height="493" src="./img/bacteria-3@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
 
-          <!-- Бактерия 2 -->
-          <div class="dirt-group dirt-group--2" id="dirtGroup-2">
-            <picture>
-              <source srcset="img/dirt-group-2.webp 1x, img/dirt-group-2@2x.webp 2x">
-              <img width="258" height="133" src="./img/dirt-group-2.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
           </div>
-          <div class="foam foam--2" id="foam-2">
-            <picture>
-              <source srcset="img/foam-2.webp 1x, img/foam-2@2x.webp 2x">
-              <img width="601" height="693" src="./img/foam-2.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <button class="bacteria bacteria--2" id="bacteria-2">
-            <picture>
-              <source srcset="img/bacteria-2.webp 1x, img/bacteria-2@2x.webp 2x">
-              <img width="493" height="493" src="./img/bacteria-2.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </button>
-          <!-- Бактерия 2 -->
+          <!-- Начальный баннер -->
 
-          <!-- Бактерия 3 -->
-          <div class="dirt-group dirt-group--3" id="dirtGroup-3">
-            <picture>
-              <source srcset="img/dirt-group-3.webp 1x, img/dirt-group-3@2x.webp 2x">
-              <img width="741" height="149" src="./img/dirt-group-3.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
+          <!-- Правила игры -->
+          <div class="rules-banner" id="rulesBanner">
+            <p><span class="rules-banner__triangle" id="rulesTriangle"></span> Нажимай на бактерии,<br>чтобы очистить
+              дом
+            </p>
           </div>
-          <div class="foam foam--3" id="foam-3">
-            <picture>
-              <source srcset="img/foam-3.webp 1x, img/foam-3@2x.webp 2x">
-              <img width="700" height="700" src="./img/foam-3.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <button class="bacteria bacteria--3" id="bacteria-3">
-            <picture>
-              <source srcset="img/bacteria-3.webp 1x, img/bacteria-3@2x.webp 2x">
-              <img width="493" height="493" src="./img/bacteria-3.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </button>
-          <!-- Бактерия 3 -->
+          <!-- Правила игры -->
 
+          <!-- Игровой баннер-->
+          <div class="game-banner" id="gameBanner">
+            <img id="backgroundImage" width="3920" height="1268" src="./img/background-clear@2x.webp"
+              alt="текст заглушка альта">
+            <!-- Бактерия 1 -->
+            <div class="dirt-group dirt-group--1" id="dirtGroup-1">
 
-          <!-- Бактерия 4 -->
-          <div class="dirt-group dirt-group--4" id="dirtGroup-4">
-            <picture>
-              <source srcset="img/dirt-group-4.webp 1x, img/dirt-group-4@2x.webp 2x">
-              <img width="1196" height="1044" src="./img/dirt-group-4.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <div class="foam foam--4" id="foam-4">
-            <picture>
-              <source srcset="img/foam-4.webp 1x, img/foam-4@2x.webp 2x">
-              <img width="1072" height="1072" src="./img/foam-4.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <button class="bacteria bacteria--4" id="bacteria-4">
-            <picture>
-              <source srcset="img/bacteria-4-cutted.webp 1x, img/bacteria-4-cutted@2x.webp 2x">
-              <img width="378" height="272" src="./img/bacteria-4-cutted.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </button>
-          <!-- Бактерия 4 -->
+              <img width="757" height="749" src="./img/dirt-group-1@2x.webp" alt="текст заглушка альта">
+            </div>
+            <div class="foam foam--1" id="foam-1">
 
+              <img width="813" height="940" src="./img/foam-1@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
+            <button class="bacteria bacteria--1" id="bacteria-1">
+              <img width="493" height="493" src="./img/bacteria-1@2x.webp" alt="текст заглушка альта">
+            </button>
+            <!-- Бактерия 1 -->
 
-          <!-- Бактерия 5 -->
-          <div class="dirt-group dirt-group--5" id="dirtGroup-5">
-            <picture>
-              <source srcset="img/dirt-group-5.webp 1x, img/dirt-group-5@2x.webp 2x">
-              <img width="303" height="626" src="./img/dirt-group-5.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <div class="foam foam--5" id="foam-5">
-            <picture>
-              <source srcset="img/foam-5.webp 1x, img/foam-5@2x.webp 2x">
-              <img width="429" height="429" src="./img/foam-5.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <button class="bacteria bacteria--5" id="bacteria-5">
-            <picture>
-              <source srcset="img/bacteria-5.webp 1x, img/bacteria-5@2x.webp 2x">
-              <img width="495" height="495" src="./img/bacteria-5.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </button>
-          <!-- Бактерия 5 -->
+            <!-- Бактерия 2 -->
+            <div class="dirt-group dirt-group--2" id="dirtGroup-2">
+              <img width="258" height="133" src="./img/dirt-group-2@2x.webp" alt="текст заглушка альта">
+            </div>
+            <div class="foam foam--2" id="foam-2">
+              <!-- <img width="601" height="693" src="./img/foam-2@2x.webp" alt="текст заглушка альта" loading="lazy"> -->
 
+              <img width="813" height="940" src="./img/foam-1@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
+            <button class="bacteria bacteria--2" id="bacteria-2">
+              <img width="493" height="493" src="./img/bacteria-2@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </button>
+            <!-- Бактерия 2 -->
 
-          <!-- Бактерия 6 -->
-          <div class="dirt-group dirt-group--6" id="dirtGroup-6">
-            <picture>
-              <source srcset="img/dirt-group-6.webp 1x, img/dirt-group-6@2x.webp 2x">
-              <img width="390" height="388" src="./img/dirt-group-6.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <div class="foam foam--6" id="foam-6">
-            <picture>
-              <source srcset="img/foam-6.webp 1x, img/foam-6@2x.webp 2x">
-              <img width="557" height="557" src="./img/foam-6.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </div>
-          <button class="bacteria bacteria--6" id="bacteria-6">
-            <picture>
-              <source srcset="img/bacteria-1-cutted2.webp 1x, img/bacteria-1-cutted2@2x.webp 2x">
-              <img width="392" height="311" src="./img/bacteria-1-cutted2.png" alt="текст заглушка альта"
+            <!-- Бактерия 3 -->
+            <div class="dirt-group dirt-group--3" id="dirtGroup-3">
+              <img width="741" height="149" src="./img/dirt-group-3@2x.webp" alt="текст заглушка альта">
+            </div>
+            <div class="foam foam--3" id="foam-3">
+              <img width="700" height="700" src="./img/foam-3@2x.webp" alt="текст заглушка альта" loading="lazy">
+
+            </div>
+            <button class="bacteria bacteria--3" id="bacteria-3">
+              <img width="493" height="493" src="./img/bacteria-3@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </button>
+            <!-- Бактерия 3 -->
+
+            <!-- Бактерия 4 -->
+            <div class="dirt-group dirt-group--4" id="dirtGroup-4">
+              <img width="1196" height="1044" src="./img/dirt-group-4@2x.webp" alt="текст заглушка альта">
+
+            </div>
+            <div class="foam foam--4" id="foam-4">
+              <img width="1072" height="1072" src="./img/foam-4@2x.webp" alt="текст заглушка альта" loading="lazy">
+
+            </div>
+            <button class="bacteria bacteria--4" id="bacteria-4">
+              <img width="378" height="272" src="./img/bacteria-4-cutted@2x.webp" alt="текст заглушка альта"
                 loading="lazy">
-            </picture>
-          </button>
+            </button>
+            <!-- Бактерия 4 -->
 
-          <!-- Бактерия 7 -->
-          <div class="dirt-group dirt-group--7" id="dirtGroup-7">
-            <picture>
-              <source srcset="img/dirt-group-7.webp 1x, img/dirt-group-7@2x.webp 2x">
-              <img width="155" height="849" src="./img/dirt-group-7.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
+            <!-- Бактерия 5 -->
+            <div class="dirt-group dirt-group--5" id="dirtGroup-5">
+              <img width="303" height="626" src="./img/dirt-group-5@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
+            <div class="foam foam--5" id="foam-5">
+              <img width="429" height="429" src="./img/foam-5@2x.webp" alt="текст заглушка альта" loading="lazy">
+
+            </div>
+            <button class="bacteria bacteria--5" id="bacteria-5">
+              <img width="495" height="495" src="./img/bacteria-5@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </button>
+            <!-- Бактерия 5 -->
+
+            <!-- Бактерия 6 -->
+            <div class="dirt-group dirt-group--6" id="dirtGroup-6">
+              <img width="390" height="388" src="./img/dirt-group-6@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
+            <div class="foam foam--6" id="foam-6">
+              <!-- <img width="557" height="557" src="./img/foam-6@2x.webp" alt="текст заглушка альта" loading="lazy"> -->
+
+              <img width="700" height="700" src="./img/foam-3@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
+            <button class="bacteria bacteria--6" id="bacteria-6">
+              <img width="392" height="311" src="./img/bacteria-1-cutted2@2x.webp" alt="текст заглушка альта"
+                loading="lazy">
+            </button>
+            <!-- Бактерия 6 -->
+
+            <!-- Бактерия 7 -->
+            <div class="dirt-group dirt-group--7" id="dirtGroup-7">
+              <img width="155" height="849" src="./img/dirt-group-7@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
+            <div class="foam foam--7" id="foam-7">
+              <img width="495" height="869" src="./img/foam-7@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
+            <button class="bacteria bacteria--7" id="bacteria-7">
+              <img width="495" height="495" src="./img/bacteria-6@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </button>
+            <!-- Бактерия 7 -->
           </div>
-          <div class="foam foam--7" id="foam-7">
-            <picture>
-              <source srcset="img/foam-7.webp 1x, img/foam-7@2x.webp 2x">
-              <img width="495" height="869" src="./img/foam-7.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
+          <!-- Игровой баннер-->
+
+          <!-- Финальный баннер -->
+          <div class="final-banner" id="finalBanner">
+            <img width="1035" height="810" src="./img/final-background@2x.webp" alt="текст заглушка альта"
+              loading="lazy">
+
+            <div class="sprayer" id="sprayer-2">
+              <img width="408" height="749" src="./img/sprayer@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
+
+            <div class="foam foam--top" id="foamTop">
+              <img width="1080" height="375" src="./img/foam-top@2x.webp" alt="текст заглушка альта" loading="lazy">
+            </div>
+
+            <div class="final-banner__text" id="finalText">
+              <p>
+                <span class="final-banner__row final-banner__row--0" id="row0">для удаления всех пятен</span>
+                <span class="final-banner__row final-banner__row--1" id="row1">крем-пена</span>
+                <span class="final-banner__row final-banner__row--2" id="row2">100% чистота</span>
+                <span class="final-banner__row final-banner__row--3" id="row3">от кухни до ванной</span>
+              </p>
+
+              <a class="btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" id="finalButton">попробовать</a>
+            </div>
           </div>
-          <button class="bacteria bacteria--7" id="bacteria-7">
-            <picture>
-              <source srcset="img/bacteria-6.webp 1x, img/bacteria-6@2x.webp 2x">
-              <img width="495" height="495" src="./img/bacteria-6.png" alt="текст заглушка альта" loading="lazy">
-            </picture>
-          </button>
+          <!-- Финальный баннер -->
+
+          <!-- Пульверизатор-->
+          <div class="sprayer" id="sprayer">
+            <img width="273" height="523" src="./img/sprayer@2x.webp" alt="текст заглушка альта" loading="lazy">
+          </div>
+          <!-- Пульверизатор-->
+
+          <!-- Таймер прогрессбар -->
+          <div class="timer" id="timer">
+            <span class="timer__timerline" id="timerLine"></span>
+          </div>
+          <!-- Таймер прогрессбар -->
         </div>
-
-
-        <!-- Нулевой баннер-->
-
-
-        <!-- Баннер с правилами -->
-        <div class="rules-banner" id="rulesBanner">
-          <p><span class="rules-banner__triangle" id="rulesTriangle"></span> Нажимай на бактерии,<br>чтобы очистить дом
-          </p>
-        </div>
-
-        <!-- баннер успех -->
-        <!-- баннер неуспех -->
-
-
-
-      </section>
+      </div>
     </main>
-    <footer>
-
-    </footer>
   </div>
   <script src="js/main.min.js"></script>
 </body>
