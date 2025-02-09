@@ -595,7 +595,7 @@ video {
 }
 
 .rules-banner {
-  display: none;
+  display: none !important;
   opacity: 0;
   background-color: #006822;
   border-radius: 30px;
@@ -1100,8 +1100,8 @@ video {
   }
 
   .bacteria--6 {
-    width: 20.42%;
-    left: 140%;
+    width: 33%;
+    left: 134%;
   }
 
   .bacteria--7 {
