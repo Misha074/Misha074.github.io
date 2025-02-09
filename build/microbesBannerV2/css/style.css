@@ -595,7 +595,7 @@ video {
 }
 
 .rules-banner {
-  display: none !important;
+  display: none;
   opacity: 0;
   background-color: #006822;
   border-radius: 30px;
