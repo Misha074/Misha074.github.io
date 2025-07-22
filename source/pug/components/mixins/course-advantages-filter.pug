@@ -1,5 +1,0 @@
-mixin course-advantages-filter(data =[])
-  ul.advantages-filter&attributes(attributes)
-    each value in data
-      li.advantages-filter__item
-        +custom-toggle-image({inputLabel: value.label, inputName: value.name, inputValue: value.value, image: value.image})

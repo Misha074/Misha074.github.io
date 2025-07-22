@@ -1,6 +1,0 @@
-mixin directions-menu(headerDirections, tag)
-  ul.directions-menu.accordion&attributes(attributes)
-    each value in headerDirections
-      li.directions-menu__item.accordion__element( data-directions="submenu", data-accordion="element", tabindex="0") #{value.title}
-        +btn({text: "Открыть"})(data-accordion="button").directions-menu__item-button.accordion__button
-        +list(value.items, tag).directions-menu__list.accordion__content( data-accordion="content")
