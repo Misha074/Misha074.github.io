@@ -1,0 +1,227 @@
+/* Global */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+}
+
+
+/* Mobile-first */
+/* 320-767 */
+
+/* Test */
+
+.test {
+    border: 1px solid lightgray;
+    width: 300px;
+    height: 600px;
+    margin: auto;
+}
+
+.test__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 27px;
+}
+
+/* Store */
+
+.store {
+    width: 211px;
+    height: 431px;
+    position: relative;
+}
+
+.store__wpapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Rack */
+
+.rack {
+    min-width: 211px;
+    display: grid;
+    grid-template-rows: 122px 95px 95px;
+}
+
+.rack__background-image-wrapper {
+    position: absolute;
+    z-index: -2;
+}
+
+.rack__shelf {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-end;
+    align-self: flex-end;
+    margin: 0;
+    padding: 0 20px;
+    list-style-type: none;
+}
+
+.rack__shelf--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Food */
+
+.food {
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Cart */
+
+.cart {
+    position: absolute;
+    /* border: 2px dashed tomato; */
+    bottom: -137px;
+    width: 276px;
+    height: 225px;
+}
+
+.cart__background-image-wrapper {
+    position: absolute;
+    z-index: -1;
+}
+
+.cart__incart-food {
+    position: relative;
+    z-index: -2;
+    margin: 0;
+    padding: 0;
+    padding-left: 75px;
+    padding-bottom: 40px;
+    list-style-type: none;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    max-width: 245px;
+
+    .food {
+        scale: 1.47;
+        transform: translateY(-18%);
+    }
+
+    .food:not(:first-child) {
+        margin-left: -5px;
+    }
+}
+
+/* Payment */
+
+
+.payment {
+    animation: show 1000ms ease-in-out;
+    display: none;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        height: 0%;
+    }
+
+    to {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+/* Button */
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    padding: 19px 18px 20px;
+
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 500;
+
+    background-color: #fce000;
+}
+
+.button:hover {
+    background-color: #f1d702;
+}
+
+.button:active {
+    background-color: #e5cc03;
+}
+
+/*Desktop*/
+/* 768+ */
+
+@media (min-width: 768px) {
+    .test {
+        width: 600px;
+        height: 1200px;
+    }
+
+    .store {
+        width: 422px;
+        height: 862px;
+
+    }
+
+
+    .rack {
+        min-width: 422px;
+        grid-template-rows: 244px 190px 190px;
+    }
+
+    .cart {
+        bottom: -310px;
+        width: 552px;
+        height: 451px;
+    }
+
+    .cart__incart-food {
+
+        padding-left: 150px;
+        padding-bottom: 85px;
+        max-width: 490px;
+    }
+}

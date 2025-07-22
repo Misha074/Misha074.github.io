@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тестовое задание для Яндекс Крауд">
+    <title>Groceries</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+    </header>
+    <main>
+        <div class="wrapper">
+            <section class="test">
+                <h1 class="test__header visually-hidden">Тестовое задание для Яндекс Крауд</h1>
+                <div class="test__wrapper container">
+                    <h2 class="test__title visually-hidden">Геймифицированный баннер</h2>
+                    <div class="store">
+                        <div class="store__wpapper">
+                            <div class="store__rack rack">
+                                <div class="rack__background-image-wrapper">
+                                    <picture>
+                                        <source media="(min-width: 768px)"
+                                            srcset="./img/rack-image-desktop.webp, img/rack-image-desktop@2x.webp 2x">
+                                        <source srcset="./img/rack-image-mobile.webp, img/rack-image-mobile@2x.webp 2x">
+                                        <img src="./img/rack-image-mobile.png" alt="Стеллаж с продуктами">
+                                    </picture>
+                                </div>
+
+
+                                <ul class="rack__shelf">
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-1">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-1-image-desktop.webp, img/foodstuffs/food-1-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-1-image-mobile.webp, img/foodstuffs/food-1-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-1-image-mobile.png"
+                                                    alt="бутылка красного вина">
+                                            </picture>
+                                        </div>
+                                    </li>
+
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-2">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-2-image-desktop.webp, img/foodstuffs/food-2-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-2-image-mobile.webp, img/foodstuffs/food-2-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-2-image-mobile.png"
+                                                    alt="бутылка красного вина">
+                                            </picture>
+                                        </div>
+                                    </li>
+
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-3">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-3-image-desktop.webp, img/foodstuffs/food-3-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-3-image-mobile.webp, img/foodstuffs/food-3-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-3-image-mobile.png"
+                                                    alt="бутылка красного вина">
+                                            </picture>
+                                        </div>
+                                    </li>
+
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-4">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-4-image-desktop.webp, img/foodstuffs/food-4-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-4-image-mobile.webp, img/foodstuffs/food-4-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-4-image-mobile.png"
+                                                    alt="бутылка красного вина">
+                                            </picture>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul class="rack__shelf rack__shelf--3">
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-5">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-5-image-desktop.webp, img/foodstuffs/food-5-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-5-image-mobile.webp, img/foodstuffs/food-5-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-5-image-mobile.png" alt="Свиной окорок">
+                                            </picture>
+                                        </div>
+                                    </li>
+
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-6">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-6-image-desktop.webp, img/foodstuffs/food-6-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-6-image-mobile.webp, img/foodstuffs/food-6-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-6-image-mobile.png"
+                                                    alt="Куриный окорочок">
+                                            </picture>
+                                        </div>
+                                    </li>
+
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-7">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-7-image-desktop.webp, img/foodstuffs/food-7-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-7-image-mobile.webp, img/foodstuffs/food-7-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-7-image-mobile.png" alt="Пакет чипсов">
+                                            </picture>
+                                        </div>
+                                    </li>
+                                </ul>
+
+
+                                <ul class="rack__shelf">
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-8">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-8-image-desktop.webp, img/foodstuffs/food-8-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-8-image-mobile.webp, img/foodstuffs/food-8-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-8-image-mobile.png" alt="Ананас">
+                                            </picture>
+                                        </div>
+                                    </li>
+
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-9">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-9-image-desktop.webp, img/foodstuffs/food-9-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-9-image-mobile.webp, img/foodstuffs/food-9-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-9-image-mobile.png" alt="Бананы">
+                                            </picture>
+                                        </div>
+                                    </li>
+
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-10">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-10-image-desktop.webp, img/foodstuffs/food-10-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-10-image-mobile.webp, img/foodstuffs/food-10-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-10-image-mobile.png"
+                                                    alt="Красное яблоко">
+                                            </picture>
+                                        </div>
+                                    </li>
+
+                                    <li class="rack__shelf-place">
+                                        <div class="food" draggable="true" id="food-11">
+                                            <picture>
+                                                <source media="(min-width: 768px)"
+                                                    srcset="./img/foodstuffs/food-11-image-desktop.webp, img/foodstuffs/food-11-image-desktop@2x.webp 2x">
+                                                <source
+                                                    srcset="./img/foodstuffs/food-11-image-mobile.webp, img/foodstuffs/food-11-image-mobile@2x.webp 2x">
+                                                <img src="./img/foodstuffs/food-11-image-mobile.png" alt="Зелёный лук">
+                                            </picture>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="store__cart cart">
+                                <div class="cart__background-image-wrapper">
+                                    <picture>
+                                        <source media="(min-width: 768px)"
+                                            srcset="./img/cart-image-desktop.webp, img/cart-image-desktop@2x.webp 2x">
+                                        <source srcset="./img/cart-image-mobile.webp, img/cart-image-mobile@2x.webp 2x">
+                                        <img src="./img/cart-image-mobile.png" alt="Продуктовая тележка">
+                                    </picture>
+                                </div>
+                                <ul class="cart__incart-food">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <form action="https://lavka.yandex.ru/" method="get" target="_blank" id="payment-form">
+                            <button class="payment__button button" type="submit">Оплатить корзину</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
