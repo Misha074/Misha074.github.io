@@ -1,0 +1,90 @@
+.button {
+    border: none;
+
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:focus-visible {
+    outline: 4px solid $color-outline-focus;
+}
+
+.button:active {
+    outline: none;
+}
+
+.button:disabled {
+    background-color: $color-disabled-background;
+    color: $color-disabled-text;
+} 
+
+.button--l {
+    height: 44px;
+    padding: 12px 17.5px;
+    border-radius: 8px;
+}
+
+.button--m {
+    height: 36px;
+    padding: 8px 13.5px;
+    border-radius: 8px;
+}
+
+.button--s {
+    height: 24px;
+    padding: 2px 9px;
+    border-radius: 4px;
+}
+
+.button--primary {
+    background-color: $color-primary;
+    color: $color-default-white;
+}
+
+.button--primary:hover {
+    background-color: #151515;
+}
+
+.button--primary:active {
+    background-color: #151515;
+    color: #FFFFFFB8;
+}
+
+.button--secondary {
+    background-color: $color-secondary;
+    color: $color-primary;
+}
+
+.button--secondary:hover {
+    background-color: #E2EBEE;
+}
+
+.button--secondary:active {
+    background-color: #E2EBEE;
+    color: #1E1E1EA3;
+}
+
+.button--danger {
+    background-color: $color-danger;
+    color: $color-default-white;
+}
+
+.button--danger:hover {
+    background-color: #D80F16;
+}
+
+.button--danger:active {
+    color: #FFFFFFB8;
+}
