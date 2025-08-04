@@ -905,7 +905,7 @@ button,
   position: absolute;
   width: 11px;
   height: 24px;
-  background-image: url("/img/dollar-white-icon.svg");
+  background-image: url("../img/dollar-white-icon.svg");
   background-repeat: no-repeat;
   top: 12px;
   left: 12px;
