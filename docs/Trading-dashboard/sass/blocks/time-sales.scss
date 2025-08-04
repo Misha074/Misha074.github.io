@@ -1,0 +1,35 @@
+.time-sales__header {
+    background-color: $color-neutral-600;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-neutral-white;
+    border-radius: 6px 6px 0 0;
+}
+
+.time-sales__header-title {
+    @include fs(1624);
+    font-weight: 600;
+}
+
+.time-sales__table-wrapper {
+    padding: 13px 22px 5px;
+    @include fs(1418);
+}
+
+.time-sales__table {
+    color: $color-neutral-white;
+    width: 100%;
+}
+
+.time-sales__table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.time-sales__table tr {
+    display: flex;
+    justify-content: space-between;
+}

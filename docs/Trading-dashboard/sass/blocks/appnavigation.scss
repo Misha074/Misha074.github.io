@@ -1,0 +1,82 @@
+.appnavigation {
+    background-color: $color-neutral-900;
+
+    width: 64px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px 8px;
+
+    @media (max-width:991px) {
+        width: 52px;
+    }
+
+    @media (max-width:767px) {
+        width: unset;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.appnavigation__logo {
+    color: $color-neutral-white;
+    text-align: center;
+}
+
+.appnavigation__tools {
+    padding: 83px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width:767px) {
+        flex-direction: row;
+        padding: 0;
+        gap: 20px;
+        display: contents;
+    }
+}
+
+.appnavigation__services {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width:767px) {
+        flex-direction: row;
+        margin: unset;
+        margin-left: auto;
+        gap: 20px;
+        display: contents;
+    }
+}
+
+.appnavigation__button {
+    border: transparent;
+    background-color: transparent;
+    color: $color-neutral-400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+
+    @media (max-width:991px) {
+        width: 36px;
+        height: 36px;
+    }
+
+}
+
+.appnavigation__button--active {
+    color: $color-brand-blue;
+    border-color: $color-brand-blue-opacity;
+    border-radius: 50%;
+    background: $color-brand-blue-background;
+}

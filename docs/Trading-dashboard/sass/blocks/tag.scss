@@ -1,0 +1,6 @@
+.tag {
+    @include fs(1218);
+    border: 1px solid $color-brand-blue;
+    border-radius: 1000px;
+    padding: 1px 4px;
+}

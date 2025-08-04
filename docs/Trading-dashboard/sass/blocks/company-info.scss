@@ -1,0 +1,93 @@
+.company-info {
+    color: $color-neutral-white;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.company-info__header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.company-info__abbr {
+    @include fs(2024)
+}
+
+.company-info__name {
+    @include fs(1418)
+}
+
+.company-info__actions {
+    display: flex;
+    gap: 12px;
+}
+
+.company-info__action-button {
+    width: 24px;
+    height: 24px;
+    border: 1px solid $color-neutral-white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-info__action-button:hover,
+.company-info__action-button:focus-visible {
+    border: 1px solid $color-brand-blue;
+    color: $color-brand-blue;
+}
+
+.company-info__main {
+    color: $color-green;
+    @include fs(1418);
+    display: flex;
+    gap: 8px
+}
+
+.company-info__current-value {
+    @include fs(4044);
+    font-weight: 700;
+    grid-row: span 2;
+}
+
+.company-info__extra-values {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.company-info__footer {
+    @include fs(1418);
+    display: flex;
+    gap: 4px;
+}
+
+.company-info__footer-title {
+    color: $color-neutral-400;
+}
+
+.company-info__footer-value {
+    color: $color-red;
+}
+
+.company-info__footer-date {
+    color: $color-neutral-white;
+    margin-left: 16px;
+    position: relative;
+}
+
+.company-info__footer-date::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 1px;
+    height: 10px;
+    background-color: $color-neutral-400;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}

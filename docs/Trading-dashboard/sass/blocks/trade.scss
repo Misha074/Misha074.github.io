@@ -1,0 +1,255 @@
+.trade {
+    background-color: $color-neutral-900;
+    color: $color-neutral-400;
+}
+
+.trade__header {
+    background-color: $color-neutral-600;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-neutral-white;
+    border-radius: 6px 6px 0 0;
+}
+
+.trade__header-title {
+    @include fs(1624);
+    font-weight: 600;
+}
+
+.trade__action-tabs {
+    display: flex;
+}
+
+.trade__action-tab {
+    flex-grow: 1;
+    text-align: center;
+    padding: 17px 16px;
+    color: $color-neutral-400;
+    border-bottom: 1px solid $color-neutral-400;
+}
+
+.trade__action-tab--active {
+    color: $color-green;
+    border-color: $color-green;
+    background: $color-green-gradient;
+}
+
+.trade__main {
+    padding: 16px 24px;
+}
+
+.trade__form {
+    @include fs(1418);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.trade__form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    select,
+    input {
+        padding: 11px 12px;
+        border-radius: 6px;
+        background-color: $color-neutral-700;
+        color: $color-neutral-white;
+        width: 100%;
+        @include fs(1418);
+        border: none;
+    }
+}
+
+.trade__form-group--stop-price {
+    gap: 6px;
+}
+
+.trade__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M0 0l4 5 4-5H0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 8px 4px;
+    @include fs(1418)
+}
+
+.trade__quantity-buttons {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+
+    margin-top: 5px;
+}
+
+.trade__quantity-button {
+    padding: 9px 23px;
+    max-width: 61.5px;
+
+    background-color: $color-neutral-600;
+    border-radius: 1000px;
+    color: $color-neutral-white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trade__quantity-button--50 {
+    display: block;
+
+    @media (max-width:1199px) {
+        display: none;
+    }
+
+    @media (max-width:991px) {
+        display: block; 
+    }
+
+    @media (max-width:500px) {
+        display: none; 
+    }
+}
+
+.trade__quantity-input::-webkit-inner-spin-button,
+.trade__quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.trade__quantity-input {
+    -moz-appearance: textfield;
+    appearance: none;
+
+
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='10' viewBox='0 0 8 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M0 3l4-3 4 3H0zM0 7l4 3 4-3H0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 8px 10px;
+}
+
+.trade__toggle {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.trade__toggle-input {
+    display: none;
+}
+
+.trade__toggle-slider {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    background-color: $color-brand-blue;
+    border-radius: 999px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.trade__toggle-slider::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background-color: $color-neutral-900;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.trade__toggle-input:checked+.trade__toggle-slider {
+    background-color: $color-green;
+}
+
+.trade__toggle-input:checked+.trade__toggle-slider::before {
+    transform: translateX(16px);
+}
+
+.trade__toggle-label {
+    color: $color-neutral-white;
+}
+
+.trade__input-description {
+    margin: 0;
+}
+
+.trade__input--price {
+    padding-left: 35px !important;
+}
+
+.trade__input-wrapper {
+    position: relative;
+}
+
+.trade__input-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 24px;
+    background-image: url('/img/dollar-white-icon.svg');
+    background-repeat: no-repeat;
+    top: 12px;
+    left: 12px;
+}
+
+
+
+.trade__dashed-line {
+    border-top: 1px dashed #444;
+    height: 1px;
+    margin: 2px 0;
+    width: 350px;
+    transform: translateX(-24px);
+
+    @media (max-width:1199px) {
+        width: 300px;
+    }
+
+    @media (max-width:991px) {
+        display: none;
+    }
+}
+
+.trade__result {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trade__result-row {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.trade__result-row-value {
+    color: $color-neutral-white;
+}
+
+.trade__form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.trade__submit-button {
+    background-color: $color-green;
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    color: $color-neutral-900;
+}
+
+.trade__disclaimer-link {
+    color: $color-neutral-white;
+}

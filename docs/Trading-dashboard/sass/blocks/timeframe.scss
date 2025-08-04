@@ -1,0 +1,47 @@
+.timeframe {
+    padding: 0 40px;
+    color: $color-neutral-white;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: end;
+
+    @media (max-width:1199px) {
+        padding: 11px 0px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.timeframe__label {
+    color: $color-neutral-400;
+}
+
+.timeframe__buttons-wrapper {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    align-items: end;
+
+    @media (max-width:991px) {
+        width: 100%;
+    }
+
+    @media (max-width:500px) {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+
+}
+
+.timeframe__button {
+    color: $color-neutral-white;
+    padding: 0 10px;
+    flex-grow: 1;
+    @include fs(1418);
+
+    @media (max-width:1199px) {
+        padding: 14px 14px 14px 0;
+    }
+}

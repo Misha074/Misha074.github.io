@@ -1,0 +1,93 @@
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info__main {
+    display: flex;
+    position: relative;
+}
+
+.user-info__main::after {
+    display: block;
+    position: absolute;
+    content: "";
+    background-color: $color-neutral-400;
+    width: 1px;
+    height: 16px;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.user-info__account-button {
+    border: none;
+    background-color: transparent;
+    color: $color-neutral-white;
+    cursor: pointer;
+    padding: 0;
+}
+
+.user-info__main-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-info__name {
+    @include fs(1418);
+}
+
+.user-info__account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.user-info__account-number {
+    @include fs(1218);
+    color: $color-neutral-400;
+}
+
+.user-info__subscribe {
+    display: block;
+    margin-left: 32px;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin-left: 40px;
+    margin-top: 4px;
+    border: none;
+    background: transparent;
+    color: $color-neutral-400;
+    cursor: pointer;
+}
+
+.user-info__subscribe:hover {
+    color: $color-brand-blue;
+}
+
+.user-info__balance {
+    display: flex;
+    gap: 32px;
+    margin-left: 24px;
+
+    @media (max-width:767px) {
+        margin-left: auto;
+    }
+
+    @media (max-width:500px) {
+        display: none;
+    }
+}
+
+.user-info__balance-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info__balance-title {
+    @include fs(1224);
+    color: $color-neutral-400;
+}

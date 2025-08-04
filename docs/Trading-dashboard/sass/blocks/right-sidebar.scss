@@ -1,0 +1,13 @@
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media (max-width:991px) {
+        flex-direction: row;
+    }
+
+    @media (max-width:767px) {
+        flex-direction: column;
+    }
+}

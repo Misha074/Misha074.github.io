@@ -1,0 +1,50 @@
+.app {
+    background-color: $color-neutral-800;
+    height: 100%;
+}
+
+
+.app__dashboard {
+    display: grid;
+    grid-template-columns: 64px auto;
+    height: 100%;
+
+
+    @media (max-width:991px) {
+        grid-template-columns: 52px auto;
+    }
+
+    @media (max-width:767px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.app__workspace-main {
+    display: grid;
+    grid-template-columns: calc(100vw - 350px - 64px - 24px) 350px;
+    gap: 8px;
+    padding: 8px;
+    background-color: $color-neutral-800;
+
+    @media (max-width:1199px) {
+        grid-template-columns: calc(100vw - 300px - 64px - 24px) 300px;
+    }
+
+    @media (max-width:991px) {
+        grid-template-columns: calc(100vw - 52px - 16px);
+    }
+
+    @media (max-width:767px) {
+        grid-template-columns: calc(100vw - 16px);
+    }
+}
+
+.app__trade {
+    @media (max-width:991px) {
+        flex-grow: 2;
+    }
+}
+
+.app__time-sales {
+    flex-grow: 1;
+}

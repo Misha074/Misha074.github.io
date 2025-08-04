@@ -1,0 +1,41 @@
+.company-stats {
+    color: $color-neutral-400;
+    display: flex;
+    gap: 32px;
+    justify-content: flex-end;
+
+    @media (max-width:1199px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.company-stats__column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+    max-width: 267px;
+
+    @media (max-width:1199px) {
+        max-width: unset;
+    }
+}
+
+.company-stats__row {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.company-stats__row--link {
+    .company-stats__row-title {
+        color: $color-neutral-white;
+    }
+}
+
+.company-stats__row-title {}
+
+.company-stats__row-value {
+    color: $color-neutral-white;
+}

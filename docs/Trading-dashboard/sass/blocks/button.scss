@@ -1,0 +1,26 @@
+.button:hover {
+    color: $color-brand-blue;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:focus-visible {
+    outline: 1px solid $color-brand-blue;
+}
+
+.button-icon:hover {
+    outline: none !important;
+}
+
+.button.active {
+    color: $color-brand-blue;
+    border-color: $color-brand-blue-opacity;
+    border-radius: 50%;
+    background: $color-brand-blue-background;
+}
+
+*:focus-visible {
+    outline: 1px solid $color-brand-blue;
+}

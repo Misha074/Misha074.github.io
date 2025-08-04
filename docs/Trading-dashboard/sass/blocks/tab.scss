@@ -1,0 +1,115 @@
+.tab {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tab__header {
+    padding: 10px 24px;
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+
+    @media (max-width:1199px) {
+        flex-direction: column
+    }
+
+    @media (max-width:991px) {
+        flex-direction: row;
+        padding: 8px 16px;
+    }
+
+    @media (max-width:767px) {
+        gap: 20px;
+        flex-direction: column;
+        padding: 8px 0;
+    }
+
+}
+
+.tab__header-item--stats {
+    flex-grow: 1;
+}
+
+.tab__chart-stats {
+    display: flex;
+    gap: 9px;
+    color: $color-neutral-white;
+    margin-bottom: 8px;
+
+    @media (max-width:767px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tab__chart-stats-item {
+    display: flex;
+    gap: 4px;
+    margin: 0;
+}
+
+.tab__chart-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    @include fs(1418);
+    margin-bottom: 8px;
+
+    @media (max-width:767px) {
+        display: grid;
+        grid-template-columns: repeat(8, 24px);
+    }
+}
+
+.tab__chart-actions--small {
+    gap: 6px;
+}
+
+.tab__chart-action-button {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-neutral-600;
+    border-radius: 2px;
+    color: $color-neutral-white;
+}
+
+.tab__chart-action-button--small {
+    width: 20px;
+    height: 20px;
+}
+
+
+.tab__chart-action-values {
+    display: flex;
+    gap: 8px;
+    margin-right: 5px;
+
+    @media (max-width:767px) {
+        grid-column: span 6;
+    }
+
+}
+
+.tab__body {
+    position: relative;
+}
+
+.tab__chart-header {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    z-index: 2;
+    background-color: transparent;
+
+    @media (max-width:767px) {
+        position: static;
+    }
+}
+
+.tab__chart--main {
+    margin-bottom: 22px;
+}

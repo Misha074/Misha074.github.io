@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Описание проекта">
+  <title>trading-dashboard</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="app">
+    <section class="app__dashboard dashboard">
+      <div class="app__navigation appnavigation">
+        <div class="appnavigation__logo">
+          <svg viewBox="0 0 32 32" width="32" height="32">
+            <use href="/img/sprite.svg#logo-icon"></use>
+          </svg>
+        </div>
+        <div class="appnavigation__tools">
+          <button class="appnavigation__button button" type="button" aria-label="to View panel">
+            <svg viewBox="0 0 20 12" width="20" height="12">
+              <use href="/img/sprite.svg#view-icon"></use>
+            </svg>
+          </button>
+          <button class="appnavigation__button button" type="button" aria-label="to Markets panel">
+            <svg viewBox="0 0 20 20" width="20" height="20">
+              <use href="/img/sprite.svg#markets-icon"></use>
+            </svg>
+          </button>
+          <button class="appnavigation__button button active" type="button" aria-label="to Charts panel">
+            <svg viewBox="0 0 18 18" width="18" height="18">
+              <use href="/img/sprite.svg#charts-icon"></use>
+            </svg>
+          </button>
+          <button class="appnavigation__button button" type="button" aria-label="to Account-wallet">
+            <svg viewBox="0 0 19 19" width="19" height="19">
+              <use href="/img/sprite.svg#wallet-icon"></use>
+            </svg>
+          </button>
+          <button class="appnavigation__button button" type="button" aria-label="to Users">
+            <svg viewBox="0 0 20 18" width="20" height="18">
+              <use href="/img/sprite.svg#users-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="appnavigation__services">
+          <button class="appnavigation__button button" type="button" aria-label="Settings">
+            <svg viewBox="0 0 20 20" width="20" height="20">
+              <use href="/img/sprite.svg#gear-icon"></use>
+            </svg>
+          </button>
+          <button class="appnavigation__button button" type="button" aria-label="Messages">
+            <svg viewBox="0 0 20 16" width="20" height="16">
+              <use href="/img/sprite.svg#message-icon"></use>
+            </svg>
+          </button>
+          <button class="appnavigation__button button" type="button" aria-label="FAQ section">
+            <svg viewBox="0 0 20 20" width="20" height="20">
+              <use href="/img/sprite.svg#faq-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="app__workspace appworkspace">
+        <div class="app__header appheader" id="appheader">
+          <div class="appheader__user-info user-info">
+            <div class="user-info__main">
+              <button class="user-info__account-button button button-icon" type="button" aria-label="User account">
+                <div class="user-info__main-info">
+                  <svg viewBox="0 0 8 5" width="8" height="5">
+                    <use href="/img/sprite.svg#triangle-down-icon"></use>
+                  </svg>
+                  <div class="user-info__avatar">
+                    <img class="user-info__avatar-photo" src="/img/avatar.webp" width="24" height="24" alt="useravatar">
+                  </div>
+                  <div class="user-info__account-info">
+                    <span class="user-info__name">
+                      James Raymond
+                    </span>
+                    <span class="user-info__account-number">
+                      Account: 4453728992
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+            <button class="user-info__subscribe button button-icon" type="button" aria-label="Subscribe">
+              <svg viewBox="0 0 12 13" width="12" height="13">
+                <use href="/img/sprite.svg#bell-icon"></use>
+              </svg>
+            </button>
+
+
+            <div class="user-info__balance">
+              <div class="user-info__balance-item">
+                <span class="user-info__balance-title">Portfolio Balance</span>
+                <span class="user-info__balance-value">$623,098.17</span>
+              </div>
+              <div class="user-info__balance-item">
+                <span class="user-info__balance-title">Available Funds</span>
+                <span class="user-info__balance-value">$122,912.50</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="appheader__search">
+            <svg viewBox="0 0 12 12" width="12" height="12">
+              <use href="/img/sprite.svg#search-icon"></use>
+            </svg>
+            <input class="appheader__search-input" type="text" name="appheader-search" class="appheader__search-field"
+              placeholder="Search">
+          </div>
+        </div>
+        <div class="app__workspace-main appworkspace__main">
+          <div class="app__workspace-main-window main-window">
+            <nav class="main-window__nav">
+              <button class="main-window__nav-button main-window__nav-button--active button" role="tab"
+                aria-selected="true">Chart</button>
+              <button class="main-window__nav-button button" role="tab">Options</button>
+              <button class="main-window__nav-button button" role="tab">News</button>
+              <button class="main-window__nav-button button" role="tab">Financials</button>
+              <button class="main-window__nav-button button" role="tab">Analysts</button>
+              <button class="main-window__nav-button button" role="tab">Risk Analysis</button>
+              <button class="main-window__nav-button button" role="tab">Releases</button>
+              <button class="main-window__nav-button button" role="tab">Notes</button>
+              <button class="main-window__nav-button button" role="tab">Profile</button>
+            </nav>
+            <div class="main-window__body">
+              <!-- here tabs content -->
+              <div class="main-window__item tab">
+                <header class="tab__header">
+                  <div class="tab__header-item">
+                    <div class="company-info">
+                      <header class="company-info__header">
+                        <span class="company-info__abbr">MSFT</span>
+                        <span class="company-info__name">Microsoft Corp NASDAQ</span>
+                        <div class="company-info__actions">
+                          <button class="company-info__action-button button" type="button" aria-label="Chart review">
+                            <svg viewBox="0 0 13 8" width="13" height="8">
+                              <use href="/img/sprite.svg#view-icon"></use>
+                            </svg>
+                          </button>
+                          <button class="company-info__action-button button" type="button" aria-label="Chart subscribe">
+                            <svg viewBox="0 0 12 13" width="12" height="13">
+                              <use href="/img/sprite.svg#bell-icon"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </header>
+                      <div class="company-info__main">
+                        <span class="company-info__current-value">406.32</span>
+                        <div class="company-info__extra-values">
+                          <span class="company-info__abs-value">+2.24</span>
+                          <span class="company-info__percentage-value">+0.26%</span>
+                        </div>
+
+                      </div>
+                      <footer class="company-info__footer">
+                        <span class="company-info__footer-title">After hours:</span>
+                        <span class="company-info__footer-value">406.83 -0.27 -0.07%</span>
+                        <span class="company-info__footer-date"><time datetime="2025-04-26T19:59:00-04:00">19:59 04/26
+                            EDT</time></span>
+                      </footer>
+                    </div>
+                  </div>
+                  <div class="tab__header-item tab__header-item--stats">
+                    <div class="company-stats">
+                      <div class="company-stats__column">
+                        <p class="company-stats__row">
+                          <span class="company-stats__row-title">Open</span>
+                          <span class="company-stats__row-value red-text">401.23</span>
+                        </p>
+                        <p class="company-stats__row">
+                          <span class="company-stats__row-title">Low</span>
+                          <span class="company-stats__row-value red-text">400.10</span>
+                        </p>
+                        <p class="company-stats__row">
+                          <span class="company-stats__row-title">High</span>
+                          <span class="company-stats__row-value green-text">400.10</span>
+                        </p>
+                        <p class="company-stats__row">
+                          <span class="company-stats__row-title">52 wk high</span>
+                          <span class="company-stats__row-value">430.82</span>
+                        </p>
+                        <p class="company-stats__row">
+                          <span class="company-stats__row-title">52 wk low</span>
+                          <span class="company-stats__row-value">273.13</span>
+                        </p>
+                      </div>
+
+                      <div class="company-stats__column">
+                        <p class="company-stats__row">
+                          <span class="company-stats__row-title">Avg Vol (3M)</span>
+                          <span class="company-stats__row-value">21.73M</span>
+                        </p>
+                        <p class="company-stats__row">
+                          <span class="company-stats__row-title">Shares Outstanding</span>
+                          <span class="company-stats__row-value">7.43B</span>
+                        </p>
+                        <p class="company-stats__row">
+                          <span class="company-stats__row-title">Mkt Cap</span>
+                          <span class="company-stats__row-value">3.02T</span>
+                        </p>
+                        <p class="company-stats__row">
+                          <span class="company-stats__row-title">Div Yield</span>
+                          <span class="company-stats__row-value">0.74%</span>
+                        </p>
+                        <a href="#" class="company-stats__row company-stats__row--link">
+                          <span class="company-stats__row-title">View all</span>
+                          <span class="company-stats__row-value">></span>
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div class="tab__body">
+
+                  <div class="tab__chart-header">
+                    <div class="tab__chart-stats">
+                      <p class="tab__chart-stats-item">
+                        <span class="tab__chart-stats-title">Open</span>
+                        <span class="tab__chart-stats-value green-text">408.36</span>
+                      </p>
+                      <p class="tab__chart-stats-item">
+                        <span class="tab__chart-stats-title">High</span>
+                        <span class="tab__chart-stats-value green-text">408.36</span>
+                      </p>
+                      <p class="tab__chart-stats-item">
+                        <span class="tab__chart-stats-title">Low</span>
+                        <span class="tab__chart-stats-value green-text">408.36</span>
+                      </p>
+                      <p class="tab__chart-stats-item">
+                        <span class="tab__chart-stats-title">Close</span>
+                        <span class="tab__chart-stats-value green-text">408.36</span>
+                      </p>
+                      <p class="tab__chart-stats-item">
+                        <span class="tab__chart-stats-title green-text">+8.90</span>
+                        <span class="tab__chart-stats-value green-text">+2.14%</span>
+                      </p>
+                      <p class="tab__chart-stats-item">
+                        <span class="tab__chart-stats-title">Vol</span>
+                        <span class="tab__chart-stats-value green-text">56,254,781</span>
+                      </p>
+                    </div>
+                    <div class="tab__chart-actions">
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Customize chart">
+                        <svg viewBox="0 0 15 15" width="15" height="15">
+                          <use href="/img/sprite.svg#pencil-gear-icon"></use>
+                        </svg>
+                      </button>
+
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Close chart">
+                        <svg viewBox="0 0 10 10" width="10" height="10">
+                          <use href="/img/sprite.svg#cross-icon"></use>
+                        </svg>
+                      </button>
+
+                      <div class="tab__chart-action-values">
+                        <span class="tab__chart-action-value perple-text">MA50:406.98</span>
+                        <span class="tab__chart-action-value yellow-text">MA200:400.25</span>
+                      </div>
+
+
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Chart candles">
+                        <svg viewBox="0 0 12 14" width="12" height="14">
+                          <use href="/img/sprite.svg#candle-icon"></use>
+                        </svg>
+                      </button>
+
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Chart make screenshot">
+                        <svg viewBox="0 0 14 13" width="14" height="13">
+                          <use href="/img/sprite.svg#screenshot-icon"></use>
+                        </svg>
+                      </button>
+
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Chart zoom plus">
+                        <svg viewBox="0 0 13 13" width="13" height="13">
+                          <use href="/img/sprite.svg#zoom-plus-icon"></use>
+                        </svg>
+                      </button>
+
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Chart zoom minus">
+                        <svg viewBox="0 0 13 13" width="13" height="13">
+                          <use href="/img/sprite.svg#zoom-minus-icon"></use>
+                        </svg>
+                      </button>
+
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Chart typing">
+                        <svg viewBox="0 0 10 12" width="10" height="12">
+                          <use href="/img/sprite.svg#t-letter-icon"></use>
+                        </svg>
+                      </button>
+
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Chart trends">
+                        <svg viewBox="0 0 13 14" width="13" height="14">
+                          <use href="/img/sprite.svg#chart-2-icon"></use>
+                        </svg>
+                      </button>
+
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Chart make curve">
+                        <svg viewBox="0 0 14 12" width="14" height="12">
+                          <use href="/img/sprite.svg#curve-icon"></use>
+                        </svg>
+                      </button>
+
+                      <button type="button" class="tab__chart-action-button button button-icon"
+                        aria-label="Customize chart">
+                        <svg viewBox="0 0 14 14" width="14" height="14">
+                          <use href="/img/sprite.svg#pencil-icon"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="tab__chart tab__chart--main" id="chartContainer">
+
+                    <div id="chart-price" style="width: 100%; height: 400px;"></div>
+                    <div id="chart-volume" style="height: 60px; width: calc(100% - 58px);"></div>
+                  </div>
+
+                  <div class="tab__chart tab__chart--second">
+                    <div class="tab__chart-actions tab__chart-actions--small">
+                      <button type="button"
+                        class="tab__chart-action-button tab__chart-action-button--small button button-icon"
+                        aria-label="Customize chart">
+                        <svg viewBox="0 0 15 15" width="15" height="15">
+                          <use href="/img/sprite.svg#pencil-gear-icon"></use>
+                        </svg>
+                      </button>
+
+                      <button type="button"
+                        class="tab__chart-action-button tab__chart-action-button--small button button-icon"
+                        aria-label="Close chart">
+                        <svg viewBox="0 0 10 10" width="10" height="10">
+                          <use href="/img/sprite.svg#cross-icon"></use>
+                        </svg>
+                      </button>
+
+                      <div class="tab__chart-action-values">
+                        <span class="tab__chart-action-value white-text">RSI (6,14,24)</span>
+                        <span class="tab__chart-action-value blue-text">RSI 14:62:56</span>
+                      </div>
+                    </div>
+                    <div id="chart-rsi" style="width: 100%; height: 125px;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="main-window__footer">
+              <div class="timeframe">
+                <span class="timeframe__label">Time frame:</span>
+                <div class="timeframe__buttons-wrapper">
+                  <button class="timeframe__button button" type="button" aria-label="1 minute">1m</button>
+                  <button class="timeframe__button button" type="button" aria-label="5 minutes">5m</button>
+                  <button class="timeframe__button button" type="button" aria-label="15 minutes">15m</button>
+                  <button class="timeframe__button button" type="button" aria-label="30 minutes">30m</button>
+                  <button class="timeframe__button button" type="button" class="active" aria-label="1 hour">1h</button>
+                  <button class="timeframe__button button" type="button" aria-label="2 hours">2h</button>
+                  <button class="timeframe__button button" type="button" aria-label="4 hours">4h</button>
+                  <button class="timeframe__button button" type="button" aria-label="1 day">D</button>
+                  <button class="timeframe__button button" type="button" aria-label="1 week">W</button>
+                  <button class="timeframe__button button" type="button" aria-label="1 monts">M</button>
+                  <button class="timeframe__button button" type="button" aria-label="all period">All</button>
+                  <button class="timeframe__button button" type="button" aria-label="2 months">2m ▼</button>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <aside class="app__right-sidebar right-sidebar">
+            <div class="app__trade trade">
+              <div class="trade__header">
+                <span class="trade__header-title">Trade</span>
+                <button type="button" class="button button-icon" aria-label="Show/hide trade panel">
+                  <svg viewBox="0 0 16 16" width="16" height="16">
+                    <use href="/img/sprite.svg#burger-icon"></use>
+                  </svg>
+                </button>
+
+              </div>
+              <div class="trade__action-tabs">
+                <button class="trade__action-tab trade__action-tab--active" type="button">
+                  Buy
+                </button>
+                <button class="trade__action-tab" type="button">
+                  Sell
+                </button>
+              </div>
+              <div class="trade__main">
+                <form class="trade__form" id="orderForm">
+                  <!-- Order Type -->
+                  <div class="trade__form-group">
+                    <label for="orderType">Order Type</label>
+                    <select class="trade__select" id="orderType" name="orderType">
+                      <option value="market-price">Market Price</option>
+                      <option value="market-price2">Market Price2</option>
+                      <option value="market-price3">Market Price3</option>
+                    </select>
+                  </div>
+
+                  <!-- Quantity -->
+                  <div class="trade__form-group">
+                    <label for="quantityInput">Quantity <span class="trade__tag tag blue-text">Shares</span></label>
+                    <input class="trade__quantity-input quantity-input" type="number" id="quantityInput" name="quantity"
+                      value="100" min="1" />
+                    <div class="trade__quantity-buttons" data-target="quantityInput">
+                      <button class="trade__quantity-button button" type="button" data-value="10">10</button>
+                      <button class="trade__quantity-button trade__quantity-button--50 button" type="button"
+                        data-value="50">50</button>
+                      <button class="trade__quantity-button button" type="button" data-value="100">100</button>
+                      <button class="trade__quantity-button button" type="button" data-value="500">500</button>
+                      <button class="trade__quantity-settings button button-icon" type="button">
+                        <svg viewBox="0 0 15 15" width="15" height="15">
+                          <use href="/img/sprite.svg#pencil-gear-icon"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Time in Force -->
+                  <div class="trade__form-group">
+                    <label for="timeForce">Time-in-Force</label>
+                    <select class="trade__select" id="timeForce" name="timeForce">
+                      <option value="day">Day</option>
+                      <option value="week">Week</option>
+                      <option value="month">Month</option>
+                      <!-- другие опции -->
+                    </select>
+                  </div>
+
+                  <!-- Stop Price -->
+                  <div class="trade__form-group trade__form-group--stop-price">
+                    <label class="trade__toggle">
+                      <input type="checkbox" class="trade__toggle-input">
+                      <span class="trade__toggle-slider"></span>
+                      <span class="trade__toggle-label">Stop Price</span>
+                    </label>
+                    <div class="trade__input-wrapper">
+                      <input class="trade__input trade__input--price" type="number" id="stopPrice" name="stopPrice"
+                        value="400.00" min="0" step="0.01" />
+                    </div>
+
+                    <p class="trade__input-description">Est. Loss: <span class="red-text">12,057.36</span></p>
+                  </div>
+
+                  <div class="trade__dashed-line"></div>
+
+                  <div class="trade__result">
+                    <p class="trade__result-row">
+                      <span class="trade__result-row-title">Buying Power</span>
+                      <span class="trade__result-row-value">$122,912.50</span>
+                    </p>
+                    <p class="trade__result-row">
+                      <span class="trade__result-row-title">Transaction Fees</span>
+                      <span class="trade__result-row-value">$4.00</span>
+                    </p>
+                    <p class="trade__result-row">
+                      <span class="trade__result-row-title">Estimated Total</span>
+                      <span class="trade__result-row-value">$40,000</span>
+                    </p>
+                  </div>
+                  <div class="trade__form-footer">
+                    <button type="submit" class="trade__submit-button">Buy MSFT</button>
+                    <a href="#" class="trade__disclaimer-link button button-icon">Disclaimer <span
+                        class="arrow">›</span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="app__time-sales time-sales">
+              <div class="time-sales__header">
+                <span class="time-sales__header-title">Time & Sales</span>
+                <button type="button" class="button button-icon" aria-label="show/hide Time & Sales panel">
+                  <svg viewBox="0 0 16 16" width="16" height="16">
+                    <use href="/img/sprite.svg#burger-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="time-sales__table-wrapper">
+                <table class="time-sales__table">
+                  <tbody>
+                    <tr>
+                      <td>16:59:32</td>
+                      <td>420.56</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>16:59:32</td>
+                      <td>420.56</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>16:59:32</td>
+                      <td>420.56</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>16:59:32</td>
+                      <td>420.56</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>16:59:32</td>
+                      <td>420.56</td>
+                      <td>25</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+  <script>
+    const { createChart, LineStyle } = LightweightCharts;
+
+    // ===== Candle generation =====
+    const generateCandles = (count = 90) => {
+      const candles = [];
+      let time = Math.floor(new Date('2023-01-01').getTime() / 1000);
+      let price = 340;
+
+      for (let i = 0; i < count; i++) {
+        const open = price;
+        const close = open + (Math.random() - 0.5) * 10;
+        const high = Math.max(open, close) + Math.random() * 5;
+        const low = Math.min(open, close) - Math.random() * 5;
+        price = close;
+
+        if (i > count - 5) price += 10;
+
+        candles.push({
+          time: time + i * 86400,
+          open: +open.toFixed(2),
+          high: +high.toFixed(2),
+          low: +low.toFixed(2),
+          close: +price.toFixed(2),
+        });
+      }
+      return candles;
+    };
+
+    const candleData = generateCandles(90);
+
+    // ===== MA functions =====
+    const calculateSMA = (data, period) => {
+      const result = [];
+      for (let i = 0; i < data.length; i++) {
+        if (i < period - 1) continue;
+        const slice = data.slice(i - period + 1, i + 1);
+        const sum = slice.reduce((acc, d) => acc + d.close, 0);
+        const avg = +(sum / period).toFixed(2);
+        result.push({ time: data[i].time, value: avg });
+      }
+      return result;
+    };
+
+    // ===== Top chart (price) =====
+    const chartPrice = createChart(document.getElementById('chart-price'), {
+      layout: { background: { color: '#0A0A0A' }, textColor: '#999999' },
+      grid: { vertLines: { color: '#1F1F1F' }, horzLines: { color: '#1F1F1F' } },
+      rightPriceScale: {
+        borderColor: '#374151',
+        scaleMargins: { top: 0.1, bottom: 0.1 },
+      },
+      timeScale: { visible: false },
+      crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+    });
+
+    // Candlesticks
+    const candleSeries = chartPrice.addCandlestickSeries({
+      upColor: '#0ecb81',
+      downColor: '#f6465d',
+      borderVisible: false,
+      wickUpColor: '#0ecb81',
+      wickDownColor: '#f6465d',
+    });
+    candleSeries.setData(candleData);
+    candleSeries.applyOptions({
+      lastValueVisible: false,
+      priceLineVisible: false,
+    });
+
+    // MA lines
+    const ma50Series = chartPrice.addLineSeries({
+      color: '#7c3aed',
+      lineWidth: 2,
+    });
+    ma50Series.setData(calculateSMA(candleData, 15));
+    ma50Series.applyOptions({
+      lastValueVisible: false,
+      priceLineVisible: false,
+    });
+
+    const ma200Series = chartPrice.addLineSeries({
+      color: '#f59e0b',
+      lineWidth: 2,
+    });
+    ma200Series.setData(calculateSMA(candleData, 40));
+    ma200Series.applyOptions({
+      lastValueVisible: false,
+      priceLineVisible: false,
+    });
+
+    // ===== Horizontal levels =====
+    [
+      { price: 380, color: '#f59e0b' },
+      { price: 427.95, color: '#7c3aed' },
+      { price: 445, color: '#0ecb81' },
+    ].forEach(({ price, color }) => {
+      candleSeries.createPriceLine({
+        price,
+        color,
+        lineWidth: 2,
+        lineStyle: LineStyle.Solid,
+        axisLabelVisible: true,
+        title: price.toFixed(2),
+      });
+    });
+
+    // ===== Bottom chart (volume) =====
+    const chartVolume = createChart(document.getElementById('chart-volume'), {
+      layout: { background: { color: '#0A0A0A' }, textColor: '#999999' },
+      grid: { vertLines: { color: '#1F1F1F' }, horzLines: { color: '#1F1F1F' } },
+      rightPriceScale: { visible: false },
+      timeScale: { visible: false },
+      crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+    });
+
+    const volumeSeries = chartVolume.addHistogramSeries({
+      color: '#4ade80',
+      priceFormat: { type: 'volume' },
+      priceScaleId: '',
+    });
+
+    const volumes = candleData.map(bar => ({
+      time: bar.time,
+      value: Math.floor(10000 + Math.random() * 10000),
+      color: bar.close > bar.open ? '#0ecb81' : '#f6465d',
+    }));
+    volumeSeries.setData(volumes);
+
+    // ===== Timescale synchronization =====
+    const timeScaleMain = chartPrice.timeScale();
+    const timeScaleVolume = chartVolume.timeScale();
+    timeScaleMain.subscribeVisibleTimeRangeChange(range => {
+      timeScaleVolume.setVisibleRange(range);
+    });
+    timeScaleVolume.subscribeVisibleTimeRangeChange(range => {
+      timeScaleMain.setVisibleRange(range);
+    });
+
+    // ===== Responsiveness =====
+    window.addEventListener('resize', () => {
+      chartPrice.resize(chartContainer.clientWidth, 400);
+      chartVolume.resize(chartContainer.clientWidth, 150);
+    });
+  </script>
+
+
+  <script>
+
+    // Create the chart
+    const chart = createChart(document.getElementById('chart-rsi'), {
+      height: 125,
+      layout: { background: { color: '#0A0A0A' }, textColor: '#999999' },
+      grid: { vertLines: { color: '#1F1F1F' }, horzLines: { color: '#1F1F1F' } },
+      rightPriceScale: {
+        borderColor: '#374151',
+        scaleMargins: { top: 0.2, bottom: 0.15 },
+      },
+      timeScale: {
+        borderColor: '#374151',
+        timeVisible: true,
+      },
+      crosshair: {
+        mode: LightweightCharts.CrosshairMode.Normal,
+      },
+    });
+
+    // Blue RSI line + background
+    const rsiSeries = chart.addAreaSeries({
+      lineColor: '#00ffff',
+      topColor: 'rgba(0, 255, 255, 0.3)',
+      bottomColor: 'rgba(0, 255, 255, 0)',
+      lineWidth: 2,
+    });
+
+    // Generate fake RSI data
+    const rsiData = [];
+    let baseTime = Math.floor(new Date('2023-01-01').getTime() / 1000);
+    for (let i = 0; i < 300; i++) {
+      const value = 30 + Math.sin(i / 10) * 20 + Math.random() * 5;
+      rsiData.push({ time: baseTime + i * 86400, value: +value.toFixed(2) });
+    }
+    rsiSeries.setData(rsiData);
+
+    // Horizontal line at 40.00 level
+    rsiSeries.createPriceLine({
+      price: 40.00,
+      color: '#f59e0b',
+      lineWidth: 2,
+      lineStyle: LineStyle.Solid,
+      axisLabelVisible: true,
+      title: '40.00',
+    });
+
+    // ===== Responsiveness =====
+    window.addEventListener('resize', () => {
+      chart.resize(chartContainer.clientWidth, 125);
+    });
+
+  </script>
+</body>
+
+</html>

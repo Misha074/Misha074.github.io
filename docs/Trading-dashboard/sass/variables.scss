@@ -1,0 +1,39 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black: #000000;
+$color-neutral-white: #ffffff;
+$color-neutral-400: #999999;
+$color-neutral-600: #1F1F1F;
+$color-neutral-700: #191919;
+$color-neutral-800: #0A0A0A;
+$color-neutral-900: #050505;
+$color-brand-blue: #00BDDD;
+$color-brand-blue-opacity: rgba(45, 202, 255, 0.25);
+$color-brand-blue-background: radial-gradient(50% 50% at 50% 50%, rgba(45, 202, 255, 0.1) 0%, rgba(125, 222, 255, 0.025) 73.82%);
+$color-brand-blue-radial-gradient: radial-gradient(50% 50% at 50% 50%, rgba(45, 202, 255, 0.1) 0%, rgba(125, 222, 255, 0.025) 73.82%);
+$color-green: #0FEDBE;
+$color-green-gradient: linear-gradient(180deg, rgba(9, 135, 108, 0.1) 32.15%, rgba(15, 237, 190, 0.25) 100%);
+$color-red: #F63C6B;
+$color-transparent: rgba(255, 255, 255, 0);
+$color-perple: #8085FF;
+$color-yellow: #FFAA2B;
+
+
+
+
+$vp-320: 320px;
+$vp-375: 375px;
+$vp-768: 768px;
+$vp-1024: 1024px;
+$vp-1280: 1280px;
+$vp-1440: 1440px;
+$vp-1920: 1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
